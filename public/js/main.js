@@ -2,15 +2,19 @@
 const navMenu = document.getElementById('nav-menu');
 const toggleMenu = document.getElementById('nav-toggle');
 const closeMenu = document.getElementById('nav-close');
+const closeButton = document.querySelector('#nav-close .fas');
 
 // Show
 toggleMenu.addEventListener('click', () => {
     navMenu.classList.toggle('show');
+    closeButton.style.cssText = '';
+
 })
 
 // Hide
 closeMenu.addEventListener('click', () => {
     navMenu.classList.remove('show');
+    closeButton.style.cssText = 'color: red;'
 })
 
 // remove menu
