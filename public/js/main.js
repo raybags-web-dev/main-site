@@ -3,11 +3,21 @@ const navMenu = document.getElementById('nav-menu');
 const toggleMenu = document.getElementById('nav-toggle');
 const closeMenu = document.getElementById('nav-close');
 const closeButton = document.querySelector('#nav-close .fas');
+const spinnerIcon = document.getElementById('spinner');
+
 
 // Show
 toggleMenu.addEventListener('click', () => {
     navMenu.classList.toggle('show');
     closeButton.style.cssText = '';
+
+});
+
+// spinner show on load
+
+$(window).on('load', () => {
+    $(spinnerIcon).fadeOut("slow");;
+    console.log('All resources loaded successfully');
 
 })
 
@@ -30,8 +40,6 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 const sections = document.querySelectorAll('section[id]');
 
-window.addEventListener('scroll', scrollActive);
-
 function scrollActive() {
     const scrollY = window.pageYOffset;
 
@@ -49,3 +57,5 @@ function scrollActive() {
         }
     })
 }
+
+window.addEventListener('scroll', scrollActive);

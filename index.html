@@ -18,11 +18,21 @@
 
     <!--====CSS script ====-->
     <link rel="stylesheet" href="/public/styles/styles.css">
+    <link rel="stylesheet" href="/public/styles/backgroud.css">
 
     <!--====Box Icons ====-->
 </head>
 
 <body>
+    <!-- ===Spinner==== -->
+    <div id="spinner" class="spinner-border" style="width: 7rem; height: 7rem; color: rgb(248, 247, 247);" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <!-- ===spinner==== -->
+
+    <!-- ==============backgroud=============== -->
+
+    <!-- ==============background============= -->
     <header class="main_header">
         <nav class="nav bd-grid">
             <div class="nav_toggle" id="nav-toggle">
@@ -37,12 +47,12 @@
                 </div>
 
                 <ul class="nav_list">
-                    <li class="nav_item"><a href="#home" class="nav_link active"><i class="fas fa-home"></i>Home</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link active"><i class="far fa-id-badge"></i>About</a></li>
-                    <li class="nav_item"><a href="#skills" class="nav_link active"><i class="fas fa-tools"></i>Skills</a></li>
-                    <li class="nav_item"><a href="#services" class="nav_link active"><i class="fas fa-dolly"></i>Services</a></li>
-                    <li class="nav_item"><a href="#works" class="nav_link active"><i class="fas fa-business-time"></i>Work</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link active"><i class="far fa-envelope"></i>Contact</a></li>
+                    <li class="nav_item"><a href="#home" class="nav_link "><i class="fas fa-home"></i>Home</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link "><i class="far fa-id-badge"></i>About</a></li>
+                    <li class="nav_item"><a href="#skills" class="nav_link "><i class="fas fa-tools"></i>Skills</a></li>
+                    <li class="nav_item"><a href="#services" class="nav_link "><i class="fas fa-dolly"></i>Services</a></li>
+                    <li class="nav_item"><a href="#works" class="nav_link "><i class="fas fa-business-time"></i>Work</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link "><i class="far fa-envelope"></i>Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -56,7 +66,6 @@
                     <div class="home_img">
                         <img src="/public/img/prof_1.jpg" alt="profile-image" draggable="true">
                     </div>
-
                     <h1 class="home_title animated">Raymond Baguma</h1>
                     <span class="home_profession">Frontend Developer</span>
 
@@ -82,16 +91,32 @@
 
             <div class="about_container bd-grid">
                 <div class="about_data">
-                    <!-- <p class="about_description bd-grid">
-                        Hello there, Welcome! I'm Raymond, and I'm a Front-end developer. I'm passionate about createing bleeding age feature reach UI, websites and desigs I have neash for experiemnting to maximize new technological advancements to meet trending web development
-                        standards.
-                    </p> -->
-                    <img src="/public/img/group_.jpg" class="about_img" alt="#">
-                    <div class="all_circles">
-                        <div class="circle_1"></div>
-                        <div class="circle_2"></div>
-                        <div class="circle_3"></div>
+                    <div id="about_card" class="card card-cascade wider reverse">
+
+                        <!-- Card image -->
+                        <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade text-center">
+
+                            <!-- Title -->
+                            <h4 class="card-title"><strong>Hi</strong></h4>
+                            <!-- Subtitle -->
+                            <p class="intro_text">Hello there, Welcome! I'm Raymond, and I'm a Front-end developer. I'm passionate about createing bleeding age feature reach UI, websites and desigs I have neash for experiemnting to maximize new technological advancements to
+                                meet trending web development standards.
+                            </p>
+
+                        </div>
                     </div>
+                    <!-- Card -->
+                    <!-- -------------------------------------------------- -->
+                    <img src="/public/img/group_.jpg" class="about_img" alt="#">
+
                 </div>
                 <div class="about_inf">
                     <div class="about_infomation">
