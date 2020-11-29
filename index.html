@@ -14,13 +14,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
+    <!-- ======animate On scroll Lib CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--====CSS script ====-->
     <link rel="stylesheet" href="/public/styles/styles.css">
-    <link rel="stylesheet" href="/public/styles/backgroud.css">
-
-    <!--====Box Icons ====-->
 </head>
 
 <body>
@@ -38,8 +36,8 @@
             <div class="nav_toggle" id="nav-toggle">
                 <i class="fas fa-bars"></i>
             </div>
-            <div>
-                <a href="#" class="nav_logo">Raymond</a>
+            <div class="logo_name"></div>
+            <a href="#" class="nav_logo">Ray</a>
             </div>
             <div class="nav_menu" id="nav-menu">
                 <div class="nav_close" id="nav-close">
@@ -47,12 +45,12 @@
                 </div>
 
                 <ul class="nav_list">
-                    <li class="nav_item"><a href="#home" class="nav_link "><i class="fas fa-home"></i>Home</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link "><i class="far fa-id-badge"></i>About</a></li>
-                    <li class="nav_item"><a href="#skills" class="nav_link "><i class="fas fa-tools"></i>Skills</a></li>
-                    <li class="nav_item"><a href="#services" class="nav_link "><i class="fas fa-dolly"></i>Services</a></li>
-                    <li class="nav_item"><a href="#works" class="nav_link "><i class="fas fa-business-time"></i>Work</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link "><i class="far fa-envelope"></i>Contact</a></li>
+                    <li class="nav_item animated fadeInLeft slow "><a href="#home" class="nav_link active"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="nav_item animated fadeInLeft slow"><a href="#about" class="nav_link "><i class="far fa-id-badge"></i>About</a></li>
+                    <li class="nav_item animated fadeInLeft slow"><a href="#skills" class="nav_link "><i class="fas fa-tools"></i>Skills</a></li>
+                    <li class="nav_item animated fadeInLeft slow"><a href="#services" class="nav_link "><i class="fas fa-dolly"></i>Services</a></li>
+                    <li class="nav_item animated fadeInLeft slow"><a href="#works" class="nav_link "><i class="fas fa-business-time"></i>Work</a></li>
+                    <li class="nav_item animated fadeInLeft slow"><a href="#contact" class="nav_link "><i class="far fa-envelope"></i>Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -64,15 +62,15 @@
             <div class="home_container" id="bd-grid">
                 <div class="home_data">
                     <div class="home_img">
-                        <img src="/public/img/prof_1.jpg" alt="profile-image" draggable="true">
+                        <img src="/public/img/works/ptofile_2.jpg" alt="profile-image" draggable="true">
                     </div>
-                    <h1 class="home_title animated">Raymond Baguma</h1>
+                    <h1 class="home_title animated fadeIn slow">Raymond Baguma</h1>
                     <span class="home_profession">Frontend Developer</span>
 
                     <div class="home_social">
-                        <a href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="home_social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/raybags-web-dev" target="_blank" class="home_social-link"><i class="fab fa-github-square"></i></a>
-                        <a href="https://www.hackerrank.com/baguma_github" target="_blank" class="home_social-link"><i class="fab fa-hackerrank"></i></a>
+                        <a href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="home_social-link animated slideInLeft "><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/raybags-web-dev" target="_blank" class="home_social-link animated fadeIn"><i class="fab fa-github-square"></i></a>
+                        <a href="https://www.hackerrank.com/baguma_github" target="_blank" class="home_social-link animated slideInRight"><i class="fab fa-hackerrank"></i></a>
                     </div>
 
                     <div class="button_container" id="btn_section">
@@ -91,7 +89,7 @@
 
             <div class="about_container bd-grid">
                 <div class="about_data">
-                    <div id="about_card" class="card card-cascade wider reverse">
+                    <div id="about_card" class="card card-cascade wider reverse" data-aos="fade-up">
 
                         <!-- Card image -->
                         <div class="view view-cascade overlay">
@@ -114,54 +112,47 @@
                         </div>
                     </div>
                     <!-- Card -->
-                    <!-- -------------------------------------------------- -->
                     <img src="/public/img/group_.jpg" class="about_img" alt="#">
-
                 </div>
-                <div class="about_inf">
-                    <div class="about_infomation">
-                        <h3 class="about_information-title">Information</h3>
 
-                        <div class="about_infomation-data">
+                <div class="about_inf">
+                    <div id="abt_1" class="about_infomation">
+                        <h3 class="about_information-title" data-aos="fade-up">Information</h3>
+
+                        <div class="about_infomation-data" data-aos="fade-up">
                             <i class="fas fa-user-tie about_information-icon"></i>
                             <span>Raymond Baguma</span>
                         </div>
-                        <div class="about_infomation-data">
+                        <div class="about_infomation-data" data-aos="fade-up">
                             <i class="fas fa-phone about_information-icon"></i>
                             <span>+31-636-329-324</span>
                         </div>
-                        <div class="about_infomation-data">
-                            <i class="far fa-envelope about_information-icon"></i>
-                            <span>baguma.github@gmail.com</span>
+                        <div class="about_infomation-data" data-aos="fade-up">
+                            <i class="fas fa-envelope about_information-icon"></i>
+                            <span data-aos="fade-up">baguma.github@gmail.com</span>
                         </div>
 
                     </div>
 
-                    <div class="about_infomation">
-                        <div class="shadow_2">
-                            <div class="shadow_3">
-                            </div>
-                        </div>
-                        <h3 class="about_information-title">Experience and Support</h3>
-
-                        <div class="about_infomation-data">
+                    <div id="abt_2" class="about_infomation">
+                        <h3 class="about_information-title" data-aos="fade-up">Experience and Support</h3>
+                        <div class="about_infomation-data" data-aos="fade-up">
                             <i class="fas fa-medal about_information-icon"></i>
-                            <div>
+                            <div data-aos="fade-up">
                                 <span class="about_information-subtitle">1.5 years</span>
                                 <span class="about_information-subtitle">Experience</span>
                             </div>
                         </div>
 
-                        <div class="about_infomation-data">
+                        <div class="about_infomation-data" data-aos="fade-up">
                             <i class="fas fa-briefcase about_information-icon"></i>
-                            <div>
+                            <div data-aos="fade-up">
                                 <span class="about_information-subtitle">20+ Own Projects</span>
                                 <span class="about_information-subtitle">Status: done</span>
                             </div>
                         </div>
 
-                        <div class="about_infomation-data">
-
+                        <div class="about_infomation-data" data-aos="fade-up">
                             <i class="fas fa-hands about_information-icon"></i>
                             <div>
                                 <span class="about_information-subtitle">Support</span>
@@ -171,62 +162,64 @@
                     </div>
                 </div>
             </div>
+            <!-- ------------------------------------------------- -->
+            <!-- ------------------------------------------------- -->
 
         </section>
 
         <!-- skills -->
         <section class="skills section" id="skills">
-            <span class="section-subtitle bd-grid">Why I'm the best candidate for the job</span>
-            <h2 class="section-title">My expertise Area</h2>
+            <span class="section-subtitle bd-grid animated fadeIn slow" data-aos="fade-up">Why I'm the best candidate for the job</span>
+            <h2 class="section-title animated fadeIn delay-1s" data-aos="fade-up">My expertise Area</h2>
 
             <div class="skills_container bd-grid">
 
                 <div class="skills_content">
-                    <h3 class="skills_subtitle">Frontend</h3>
+                    <h3 class="skills_subtitle" data-aos="fade-up">Frontend</h3>
 
                     <div class="skills_data">
-                        <span class="skills_name">HTML/CSS</span>
-                        <span class="skills_number">85%</span>
-                        <span class="skills_bar skills_html"></span>
+                        <span class="skills_name" data-aos="fade-up">HTML/CSS</span>
+                        <span class="skills_number" data-aos="fade-up">85%</span>
+                        <span class="skills_bar skills_html" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">Javascript</span>
-                        <span class="skills_number">80%</span>
-                        <span class="skills_bar skills_js"></span>
+                        <span class="skills_name" data-aos="fade-up">Javascript</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_js" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">Vue.js</span>
-                        <span class="skills_number">65%</span>
-                        <span class="skills_bar skills_vue"></span>
+                        <span class="skills_name" data-aos="fade-up">Vue.js</span>
+                        <span class="skills_number" data-aos="fade-up">65%</span>
+                        <span class="skills_bar skills_vue" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">Bootstrap</span>
-                        <span class="skills_number">80%</span>
-                        <span class="skills_bar skills_bootstrap"></span>
+                        <span class="skills_name" data-aos="fade-up">Bootstrap</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_bootstrap" data-aos="fade-up"></span>
                     </div>
                 </div>
                 <div class="skills_content">
-                    <h3 class="skills_subtitle">Backend</h3>
+                    <h3 class="skills_subtitle" data-aos="fade-up">Backend</h3>
 
                     <div class="skills_data">
-                        <span class="skills_name">Node js</span>
-                        <span class="skills_number">60%</span>
-                        <span class="skills_bar skills_nodejs"></span>
+                        <span class="skills_name" data-aos="fade-up">Node js</span>
+                        <span class="skills_number" data-aos="fade-up">60%</span>
+                        <span class="skills_bar skills_nodejs" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">Javascript</span>
-                        <span class="skills_number">80%</span>
-                        <span class="skills_bar skills_js"></span>
+                        <span class="skills_name" data-aos="fade-up">Javascript</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_js" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">MongoDB</span>
-                        <span class="skills_number">75%</span>
-                        <span class="skills_bar skills_mongodb"></span>
+                        <span class="skills_name" data-aos="fade-up">MongoDB</span>
+                        <span class="skills_number" data-aos="fade-up">75%</span>
+                        <span class="skills_bar skills_mongodb" data-aos="fade-up"></span>
                     </div>
                     <div class="skills_data">
-                        <span class="skills_name">jQuery</span>
-                        <span class="skills_number">70%</span>
-                        <span class="skills_bar skills_jquery"></span>
+                        <span class="skills_name" data-aos="fade-up">jQuery</span>
+                        <span class="skills_number" data-aos="fade-up">70%</span>
+                        <span class="skills_bar skills_jquery" data-aos="fade-up"></span>
                     </div>
                 </div>
             </div>
@@ -235,14 +228,14 @@
 
         <!-- education -->
         <section class="eduction section">
-            <span class="section-subtitle bd-grid">Qualification</span>
-            <h2 class="section-title">Education</h2>
+            <span class="section-subtitle bd-grid" data-aos="fade-up">Qualification</span>
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
 
             <div class="education_container bd-grid">
                 <div class="education_content">
                     <div>
-                        <h3 class="education_year">2018 - 2019</h3>
-                        <span class="education_university">Udemy Inc</span>
+                        <h3 class="education_year" data-aos="fade-up">2018 - 2019</h3>
+                        <span class="education_university" data-aos="fade-up">Udemy Inc</span>
                     </div>
 
                     <div class="education_time">
@@ -251,14 +244,14 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race">Diploma Software Development</h3>
-                        <span class="education_specialty">Frontend</span>
+                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Frontend</span>
                     </div>
                 </div>
 
                 <div class="education_content">
                     <div>
-                        <h3 class="education_year">2019 - 2020</h3>
+                        <h3 class="education_year" data-aos="fade-up">2019 - 2020</h3>
                         <span class="education_university">Udemy Inc</span>
                     </div>
 
@@ -268,15 +261,15 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race">Diploma Software Development</h3>
-                        <span class="education_specialty">Designs|UX</span>
+                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Designs|UX</span>
                     </div>
                 </div>
 
                 <div class="education_content">
                     <div>
-                        <h3 class="education_year">2020 - Now</h3>
-                        <span class="education_university">Udemy Inc</span>
+                        <h3 class="education_year" data-aos="fade-up">2020 - Now</h3>
+                        <span class="education_university" data-aos="fade-up">Udemy Inc</span>
                     </div>
 
                     <div class="education_time">
@@ -285,8 +278,8 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race">Diploma Software Development</h3>
-                        <span class="education_specialty">Backend</span>
+                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Backend</span>
                     </div>
                 </div>
 
@@ -295,38 +288,38 @@
 
         <!-- services -->
         <section class="services section" id="services">
-            <span class="section-subtitle bd-grid">What I offer</span>
-            <h2 class="section-title">My services</h2>
+            <span class="section-subtitle bd-grid" data-aos="fade-up">What I offer</span>
+            <h2 class="section-title" data-aos="fade-up">My services</h2>
 
             <div class="services_container bd-grid">
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fab fa-r-project services_icon"></i>
                     <h3 class="services_title">Project planning</h3>
                     <p class="services_description">I'm availabel for consultation and project planning</p>
                 </div>
 
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fas fa-dice services_icon"></i>
                     <h3 class="services_title">UI/UX</h3>
                     <p class="services_description">I offer design options and fitting recommendations based on business needs</p>
                 </div>
 
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fas fa-laptop-code services_icon"></i>
                     <h3 class="services_title">Content Develpment</h3>
                     <p class="services_description">I offer quality software at Frontend and backend interfaces, ensure debugging, testing and data-base intergrations</p>
                 </div>
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fas fa-network-wired services_icon"></i>
                     <h3 class="services_title">Production</h3>
                     <p class="services_description">I take care of deployment when its time to deploy the property into the cloud. </p>
                 </div>
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fas fa-server services_icon"></i>
-                    <h3 class="services_title">Project Mentenance</h3>
-                    <p class="services_description">I offer mentenance services new feature intergrations and infrastuructual intergrity.</p>
+                    <h3 class="services_title">Project Maintenance</h3>
+                    <p class="services_description">I offer maintenance services new feature intergrations and infrastuructual intergrity.</p>
                 </div>
-                <div class="services_content">
+                <div class="services_content" data-aos="fade-up">
                     <i class="fas fa-users-cog services_icon"></i>
                     <h3 class="services_title">Consultation</h3>
                     <p class="services_description">I offer consultation services about what, why, when, how, and shoud in regards to bleeding edge technology.</p>
@@ -335,25 +328,24 @@
         </section>
 
         <!-- project in mind -->
-        <section class="project section">
+        <section class="project section" data-aos="fade-up">
             <div class="project_container bd-grid">
                 <div class="project_data">
-                    <h2 class="section-title project_title">Do you a project in mind ?</h2>
-                    <p class="project_description">You've been thinking about this project, and would like to bring it to life, well... I'm your guy. Dont hesitate to contact me. Just drop me a quick message here.</p>
-                    <a href="#contact" class="button button_light" id="contact_button">Contact Me</a>
+                    <h2 class="section-title project_title" data-aos="fade-up">Do you a project in mind ?</h2>
+                    <p class="project_description" data-aos="fade-up">You've been thinking about this project, and would like to bring it to life, well... I'm your guy. Dont hesitate to contact me. Just drop me a quick message here.</p>
+                    <a href="#contact" class="button button_light" id="contact_button" data-aos="fade-up">Contact Me</a>
                 </div>
-
-                <img src="/public/img/porj_img.jpg" alt="" class="project_img">
+                <img src="/public/img/porj_img.jpg" alt="" class="project_img" data-aos="fade-up">
             </div>
         </section>
 
         <!-- works -->
         <section class="works section" id="works">
-            <span class="section-subtitle bd-grid">My portfolio</span>
-            <h2 class="section-title">Recent Works</h2>
+            <span class="section-subtitle bd-grid" data-aos="fade-up">My portfolio</span>
+            <h2 class="section-title" data-aos="fade-up">Recent Works</h2>
 
             <div class="works_container bd-grid">
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -361,7 +353,7 @@
                         <span class="works_title">project 1</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -370,7 +362,7 @@
                     </div>
                 </div>
 
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -378,7 +370,7 @@
                         <span class="works_title">project 3</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -386,7 +378,7 @@
                         <span class="works_title">project 4</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -394,7 +386,7 @@
                         <span class="works_title">project 5</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -402,28 +394,28 @@
                         <span class="works_title">project 6</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
                         <a href="#" class="works_link"><i class="fas fa-external-link-alt"></i></a>
-                        <span class="works_title">project 6</span>
+                        <span class="works_title">project 7</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
                         <a href="#" class="works_link"><i class="fas fa-external-link-alt"></i></a>
-                        <span class="works_title">project 6</span>
+                        <span class="works_title">project 8</span>
                     </div>
                 </div>
-                <div class="works_img">
+                <div class="works_img" data-aos="fade-up">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
                         <a href="#" class="works_link"><i class="fas fa-external-link-alt"></i></a>
-                        <span class="works_title">project 6</span>
+                        <span class="works_title">project 9</span>
                     </div>
                 </div>
             </div>
@@ -431,48 +423,48 @@
 
         <!-- Contact -->
         <section class="contact section" id="contact">
-            <span class="section-subtitle bd-grid">Contact</span>
-            <h2 class="section-title">Get In Touch</h2>
+            <span class="section-subtitle bd-grid" data-aos="fade-up" data-aos="fade-up">Contact</span>
+            <h2 class="section-title" data-aos="fade-up" data-aos="fade-up">Get In Touch</h2>
 
             <div class="contact_container bd-grid">
 
                 <form action="" class="contact_form">
                     <div class="contact_inputs">
-                        <input type="text" placeholder="Name" class="contact_input">
-                        <input type="email" placeholder="Email" class="contact_input">
+                        <input type="text" placeholder="Name" class="contact_input" data-aos="fade-up" data-aos="fade-up">
+                        <input type="email" placeholder="Email" class="contact_input" data-aos="fade-up" data-aos="fade-up">
                     </div>
 
-                    <input type="text" placeholder="Project" class="contact_input">
+                    <input type="text" placeholder="Project" class="contact_input" data-aos="fade-up" data-aos="fade-up">
 
-                    <textarea name="" id="" cols="0" rows="10" placeholder="type your message here...." class="contact_input"></textarea>
+                    <textarea name="" id="" cols="0" rows="10" placeholder="type your message here...." class="contact_input" data-aos="fade-up" data-aos="fade-up"></textarea>
 
-                    <input type="submit" value="Send Message" class="button contact_button">
+                    <input id="submit_btn" type="submit" value="Send Message" class="button contact_button" data-aos="fade-up" data-aos="fade-up">
 
                 </form>
 
                 <div>
                     <div class="contact_info">
-                        <h3 class="contact_subtitle">Call me</h3>
+                        <h3 class="contact_subtitle" data-aos="fade-up">Call me</h3>
 
-                        <span class="contact_text">+31-636-329-324</span>
-                        <span class="contact_text">+31-636-329-324</span>
+                        <span class="contact_text" data-aos="fade-up">+31-636-329-324</span>
+                        <span class="contact_text" data-aos="fade-up">+31-636-329-324</span>
 
-
-                    </div>
-
-                    <div class="contact_info">
-                        <h3 class="contact_subtitle">Email</h3>
-
-                        <span class="contact_text">baguma.github@gmail.com</span>
-                        <span class="contact_text">drop me an email</span>
 
                     </div>
 
                     <div class="contact_info">
-                        <h3 class="contact_subtitle">Address</h3>
+                        <h3 class="contact_subtitle" data-aos="fade-up">Email</h3>
 
-                        <span class="contact_text">Netherlands</span>
-                        <span class="contact_text">1032CX Amsterdam</span>
+                        <span class="contact_text" data-aos="fade-up">baguma.github@gmail.com</span>
+                        <span class="contact_text" data-aos="fade-up">drop me an email</span>
+
+                    </div>
+
+                    <div class="contact_info">
+                        <h3 class="contact_subtitle" data-aos="fade-up">Address</h3>
+
+                        <span class="contact_text" data-aos="fade-up">Netherlands</span>
+                        <span class="contact_text" data-aos="fade-up">1032CX Amsterdam</span>
                     </div>
                 </div>
             </div>
@@ -482,18 +474,18 @@
     <!-- Footer -->
     <footer class="footer section">
         <div class="footer_container bd-grid">
-            <h1 class="footer_title">Raymond </h1>
-            <p class="footer_description">Feel free to drop some feedback</p>
+            <h1 class="footer_title animated slideInLeft ">Raymond </h1>
+            <p class="footer_description animated slideInRight ">Feel free to drop some feedback</p>
 
 
             <div class="footer__s">
-                <a href="" class="footer_link"><i class="fab fa-facebook"></i></a>
-                <a href="" class="footer_link"><i class="fab fa-instagram"></i></a>
-                <a href="" class="footer_link"><i class="fab fa-github"></i></i></a>
-                <a href="" class="footer_link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="footer_link animated slideInLeft slow"><i class="fab fa-linkedin"></i></a>
+                <a href="" target="_blank" class="footer_link animated slideInLeft slow"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/raybags-web-dev" target="_blank" class="footer_link animated slideInRight slow"><i class="fab fa-github"></i></i></a>
+                <a href="https://www.hackerrank.com/baguma_github" target="_blank" class="footer_link animated slideInRight slow"><i class="fab fa-hackerrank"></i></a>
             </div>
 
-            <p class="footer_copyright">All rights reserved | 2020</p>
+            <p class="footer_copyright animated fadeIn slow">All rights reserved | 2020</p>
         </div>
     </footer>
 
@@ -506,9 +498,13 @@
     <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js "></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js "></script>
+    <!-- AOS library CDN JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- ====Customer JS script==== -->
-    <script type="text/javascript" src="/public/js/main.js"></script>
+    <script type="module" src="/public/js/main.js"></script>
+    <!-- =====animations======== -->
+    <!-- <script type="text/javascript" src="/public/js/animations.js" async></script> -->
 </body>
 
 </html>

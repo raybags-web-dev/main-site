@@ -88,6 +88,7 @@ body {
     background-color: var(--var(--first-color-lighten));
     color: var(--text-color);
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -192,26 +193,23 @@ img {
     font-size: 1.8rem;
     font-weight: var(--font-bold);
     user-select: none;
-    letter-spacing: .6rem;
-    transition: .5s;
     font-family: 'Lobster Two', cursive;
     text-shadow: 2px -2px 0px rgba(175, 109, 109, 0.9);
 }
 
 .nav_logo:hover {
     color: rgb(68, 22, 22);
-    transition: .5s;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
     border-radius: 5rem;
     text-overflow: clip;
-    text-shadow: -1000px 1px 1px rgba(240, 119, 119, 0.9);
+    text-shadow: 2px -2px 0px rgba(175, 109, 109, 0.9);
 }
 
 .nav_menu {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 94%;
+    width: 85%;
     border: none;
     height: 100vh;
     padding: 3rem;
@@ -240,9 +238,6 @@ img {
 .nav_item {
     margin-bottom: var(--mb-4);
 }
-
-
-/* ///////////////////////////////////// */
 
 .nav_link {
     position: relative;
@@ -311,6 +306,11 @@ img {
     text-decoration: underline;
     color: red;
     transition: 0;
+}
+
+.active2 {
+    background-color: red;
+    background-image: linear-gradient(to top, #f77062 100%, #fe5196 100%);
 }
 
 
@@ -723,6 +723,10 @@ img {
 .project {
     background-image: var(--background-yellow);
     padding-bottom: 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    justify-content: center;
+    border-radius: .4rem;
 }
 
 .project_container {
@@ -963,6 +967,21 @@ img {
     .about_inf {
         padding-left: 4rem;
     }
+    #about_card {
+        border: .2rem solid #d3bfaf;
+        opacity: 10;
+        text-shadow: -1000px 1px 1px rgba(240, 119, 119, 0.9);
+        background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    }
+    .card-body .intro_text {
+        color: #532b2b;
+        font-size: 1.5rem;
+    }
+    .about_infomation-data span {
+        color: #361d1d;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
     .about_information {
         padding-left: 4rem;
     }
@@ -1055,17 +1074,17 @@ img {
         margin: 0;
         color: #864a39;
         padding-left: var(--nav-width);
+        scroll-behavior: smooth;
         text-shadow: 1px -1px 1px rgba(248, 244, 244, 0.9);
         background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    }
+    .main {
+        scroll-behavior: smooth;
     }
     .main_header {
         position: relative;
         width: 0;
         color: #864a39;
-    }
-    .about_container {
-        height: 100vh;
-        width: 100vw;
     }
     .nav_toggle,
     .nav_logo,
@@ -1088,30 +1107,21 @@ img {
     }
     /* profile image */
     .home_container .home_data {
-        padding-top: 1rem;
+        padding-top: .8rem;
         min-width: 1027px;
     }
     .home_img {
-        padding: .1rem .1rem 0rem .6rem;
-        margin-top: 0rem;
-        width: 170px;
-        height: 180px;
-        background-image: linear-gradient(to right, #030303 100%, black 100%);
-        border-radius: 100em;
-        border: .5rem solid #864a39;
-        transition: .8s;
-        margin-left: -.4rem;
-        margin-bottom: var(--mb-2);
-        justify-content: center;
+        border-left: 1rem solid #6e2511;
+        border-right: 1rem solid #6e2511;
+        height: 150px;
+        width: 180px;
     }
     .home_img img {
-        position: relative;
-        margin-top: -.4rem;
-        border: none;
-        height: 22vh;
-        margin-left: -.1rem;
-        background-color: transparent;
-        color: transparent;
+        margin-left: -.4rem;
+        border-radius: .6em;
+        background-image: none;
+        overflow: hidden;
+        justify-content: center;
     }
     .home_social-link {
         display: inline-flex;
@@ -1164,12 +1174,17 @@ img {
     .home_container {
         height: 100vh;
     }
+    #btn_section .button {
+        margin-bottom: 0rem;
+        border-left: .8rem solid #864a39;
+        border-right: .8rem solid #864a39;
+    }
     .button_container a:nth-child(1) {
-        color: white;
-        color: var(--font-white);
+        color: #FFFFFF;
     }
     .button_container a:nth-child(1):hover {
-        transition: .8s;
+        transition: .5s;
+        color: #FFFFFF;
         border: 2px solid white;
         text-shadow: 1000px 1px 1px rgba(240, 119, 119, 0.9);
     }
@@ -1187,8 +1202,18 @@ img {
         transition: .5s;
     }
     /* about */
+    .about_container {
+        height: 100vh;
+        width: 100vw;
+    }
+    .about_inf {
+        margin-left: 5rem;
+    }
     .about_information {
         padding-left: 6rem;
+    }
+    #abt_1 {
+        padding-bottom: 5rem;
     }
     #about_card {
         border: .2rem solid #dfa579;
@@ -1196,6 +1221,14 @@ img {
         opacity: 10;
         text-shadow: -1000px 1px 1px rgba(240, 119, 119, 0.9);
         background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    }
+    .card-body .intro_text {
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+    .about_infomation-data span {
+        color: #FFFFFF;
+        font-size: 1.1rem;
     }
     .education_time {
         display: block;
@@ -1248,8 +1281,24 @@ img {
     }
     .project_container {
         box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
-        background-image: var(--background-black);
         color: var(--first-color-darken);
+        background-image: inherit
+    }
+    .project_data .button {
+        color: #FFFFFF;
+        border-left: .8rem solid #FFFFFF;
+        border-right: .8rem solid #FFFFFF;
+        transition: ease-in;
+        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
+    }
+    .project_data .button:hover {
+        color: #FFFFFF;
+        transition: .5s;
+        background: #FFFFFF;
+        transition: ease-in-out;
+        border-left: .8rem solid #864a39;
+        border-right: .8rem solid #864a39;
+        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
     }
     .services_description {
         color: #4b0303;
@@ -1297,7 +1346,6 @@ img {
     .services_content:hover .services_title {
         color: var(--first-color-lighten);
         transition: .5;
-        text-shadow: -2000px 5px 1px rgba(252, 251, 251, 0.5);
     }
     .services_content:hover .services_description {
         color: var(--first-color-lighten);
@@ -1323,7 +1371,6 @@ img {
         width: 300px;
         border-radius: .5rem;
     }
-    /* ----------------------------------------- */
     .works_data {
         position: absolute;
         bottom: -100%;
@@ -1398,6 +1445,21 @@ img {
         letter-spacing: 2px;
         height: 3rem;
     }
+    #submit_btn {
+        color: #FFFFFF;
+        transition: .9s;
+        border-left: .8rem solid #FFFFFF;
+        border-right: .8rem solid #FFFFFF;
+        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
+    }
+    #submit_btn:hover {
+        color: #FFFFFF;
+        transition: .9s;
+        background: #FFFFFF;
+        border-left: .8rem solid #864a39;
+        border-right: .8rem solid #864a39;
+        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
+    }
     /* footer */
     main {
         padding-bottom: 5rem;
@@ -1455,3 +1517,6 @@ img {
         letter-spacing: 2px;
     }
 }
+
+
+/* ========================================= */
