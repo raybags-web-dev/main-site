@@ -303,14 +303,12 @@ img {
 /* Active class */
 
 .active {
-    text-decoration: underline;
     color: red;
-    transition: 0;
-}
-
-.active2 {
-    background-color: red;
-    background-image: linear-gradient(to top, #f77062 100%, #fe5196 100%);
+    line-height: 2px;
+    letter-spacing: 5px;
+    text-decoration: solid;
+    text-decoration: underline;
+    text-overflow: clip;
 }
 
 
@@ -1104,6 +1102,15 @@ img {
         left: 56%;
         top: 20%;
         z-index: 9999;
+    }
+    /* active class */
+    .active {
+        color: red;
+        line-height: 2px;
+        letter-spacing: 5px;
+        text-decoration: solid;
+        text-decoration: underline;
+        text-shadow: 2px -2px 1px #f10909;
     }
     /* profile image */
     .home_container .home_data {
