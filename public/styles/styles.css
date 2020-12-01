@@ -331,8 +331,8 @@ img {
 /* spinner */
 
 #spinner {
-    position: fixed;
-    text-align: justify;
+    position: absolute;
+    justify-self: center;
     left: 35%;
     top: 20%;
     z-index: 9999;
@@ -906,6 +906,14 @@ img {
     .nav_menu {
         width: var(--nav-width);
     }
+    #spinner {
+        position: absolute;
+        justify-self: center;
+        left: 44%;
+        top: 20%;
+        padding: 1rem;
+        z-index: 9999;
+    }
     .about_container,
     .skills_container,
     .services_container,
@@ -1111,6 +1119,11 @@ img {
         text-decoration: solid;
         text-decoration: underline;
         text-shadow: 2px -2px 1px #f10909;
+    }
+    .fas,
+    .fab {
+        font-size: 1.8rem;
+        text-shadow: 2px -2px 1px #fdfdfd;
     }
     /* profile image */
     .home_container .home_data {
