@@ -55,25 +55,24 @@ function flipCard() {
 // handle clicks on links
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-// ----------------------------------------------------------------
 // scrollSpy
 // Cache selectors
-var lastId,
+let lastId,
     topMenu = $(links),
-    topMenuHeight = topMenu.outerHeight() + 15,
+    topMenuHeight = topMenu.outerHeight()
 
-    // All list items
-    menuItems = topMenu.find("a"),
+// All list items
+menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function() {
-        var item = $($(this).attr("href"));
+        let item = $($(this).attr("href"));
         if (item.length) { return item; }
     });
 
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e) {
-    var href = $(this).attr("href"),
+    let href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
     $('html, body').stop().animate({
         scrollTop: offsetTop
@@ -84,16 +83,16 @@ menuItems.click(function(e) {
 // Bind to scroll
 $(window).scroll(function() {
     // container scroll position
-    var fromTop = $(this).scrollTop() + topMenuHeight;
+    let fromTop = $(this).scrollTop() + topMenuHeight;
 
     // id of current scroll item
-    var cur = scrollItems.map(function() {
+    let cur = scrollItems.map(function() {
         if ($(this).offset().top < fromTop)
             return this;
     });
     // the id of the current element
     cur = cur[cur.length - 1];
-    var id = cur && cur.length ? cur[0].id : "";
+    let id = cur && cur.length ? cur[0].id : "";
 
     if (lastId !== id) {
         lastId = id;

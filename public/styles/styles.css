@@ -376,6 +376,7 @@ img {
     font-size: 20px;
     color: #050505;
     text-shadow: var(--shadow);
+    opacity: .7;
 }
 
 
@@ -982,6 +983,8 @@ img {
     .card-body .intro_text {
         color: #532b2b;
         font-size: 1.5rem;
+        opacity: .7;
+        text-shadow: var(--shadow);
     }
     .about_infomation-data span {
         color: #361d1d;
@@ -1133,12 +1136,18 @@ img {
     .home_img {
         border-left: 1rem solid #6e2511;
         border-right: 1rem solid #6e2511;
-        height: 150px;
-        width: 180px;
+        height: 310px;
+        width: 300px;
+        margin-top: -3rem;
     }
     .home_img img {
+        position: relative;
+        top: -1rem;
+        margin-top: auto;
+        width: 300px;
+        height: 300px;
         margin-left: -.4rem;
-        border-radius: .6em;
+        border-radius: .4em;
         background-image: none;
         overflow: hidden;
         justify-content: center;
@@ -1168,7 +1177,7 @@ img {
     .home_title {
         color: #6e2511;
         font-size: 2rem;
-        padding-top: 5rem;
+        padding-top: 2rem;
         text-shadow: 1px -2px 1px rgba(46, 40, 40, 0.9);
     }
     .home_profession {
@@ -1194,7 +1203,13 @@ img {
     .home_container {
         height: 100vh;
     }
+    #btn_section {
+        margin-top: -1rem;
+    }
     #btn_section .button {
+        width: 200px;
+        height: 70px;
+        font-size: 1.1rem;
         margin-bottom: 0rem;
         border-left: .8rem solid #864a39;
         border-right: .8rem solid #864a39;
@@ -1245,6 +1260,8 @@ img {
     .card-body .intro_text {
         color: #FFFFFF;
         font-size: 1.5rem;
+        opacity: .7;
+        text-shadow: var(--shadow);
     }
     .about_infomation-data span {
         color: #FFFFFF;
