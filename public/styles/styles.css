@@ -1414,11 +1414,11 @@ a {
         content: "";
         width: 100%;
         height: 100%;
-        background: rgba(109, 94, 92, .3);
+        background: rgba(252, 2, 2, 0.3);
         transition: .6s;
-        left: 100%;
-        top: 0;
-        z-index: -5;
+        left: -13%;
+        top: -13%;
+        z-index: 10;
         border-radius: .2rem;
         box-sizing: border-box;
         position: absolute;
@@ -1428,10 +1428,10 @@ a {
         content: "";
         width: 100%;
         height: 100%;
-        background: rgba(121, 87, 79, 0.5);
+        background: rgba(241, 66, 26, 0.5);
         transition: .6s;
-        left: 0%;
-        top: -100%;
+        left: -25%;
+        top: -25%;
         z-index: -2;
         border-radius: .2rem;
         box-sizing: border-box;
@@ -1443,6 +1443,10 @@ a {
         left: 0;
         top: 0;
         transition: .5s;
+        border-left: .8rem solid rgb(155, 86, 86);
+        border-right: .8rem solid rgb(155, 86, 86);
+        padding-left: 1rem;
+        padding-right: 1rem;
         background: rgba(5, 5, 5, 0.3);
     }
     /* ============profile pic animation==============- */
@@ -1537,6 +1541,9 @@ a {
     }
     .about_inf {
         margin-left: 5rem;
+    }
+    #abt_img {
+        padding-bottom: 1rem;
     }
     .about_information {
         padding-left: 6rem;
