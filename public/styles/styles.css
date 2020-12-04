@@ -123,13 +123,69 @@ a {
     display: none;
 }
 
-img {
+
+/* *************************************** */
+
+.home_img {
+    width: 50%;
+    margin: 50px auto;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: .2rem;
+}
+
+.prof_pho {
     max-width: 100%;
-    height: auto;
     display: block;
     box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
     user-select: none;
+    border-radius: .2rem;
 }
+
+.prof_pho:hover {
+    border: .4rem solid #ce8981;
+    transition: .6s;
+    border-bottom-color: rgb(rgb(254, 173, 166));
+}
+
+.home_img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(109, 94, 92, .3);
+    transition: .6s;
+    left: -1.5rem;
+    top: -1rem;
+    z-index: -2;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.home_img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(151, 142, 140, .5);
+    transition: .4s;
+    left: -2.5rem;
+    top: -2rem;
+    z-index: -4;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.home_img:hover::before,
+.home_img:hover::after {
+    left: 0;
+    top: 0;
+    transition: .5s;
+    background: rgba(5, 5, 5, 0.3);
+}
+
+
+/* ******************************************/
 
 .section {
     padding: 4rem 0 2rem;
@@ -339,29 +395,7 @@ img {
 }
 
 
-/* profile image container */
-
-.home_img {
-    padding: 1.3rem 0rem 0rem .8rem;
-    margin-top: 2rem;
-    width: 170px;
-    height: 170px;
-    background-image: var(--text_background);
-    border-radius: .5em;
-    overflow: hidden;
-    margin-bottom: var(--mb-2);
-    justify-content: center;
-}
-
-
 /* image resizing */
-
-.home_img img {
-    margin-top: -1.5rem;
-    margin-left: -.3rem;
-    border-radius: .3em;
-    width: 155px;
-}
 
 #about_card {
     background-image: var(--background-yellow);
@@ -369,6 +403,17 @@ img {
     text-align: left;
     color: #FFFFFF;
     margin-bottom: 2rem;
+}
+
+.group_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group_img img {
+    width: 100%;
+    margin: auto;
 }
 
 .card-body .intro_text {
@@ -457,7 +502,7 @@ img {
 }
 
 #btn_section {
-    margin-top: 3rem;
+    margin-top: -3rem;
 }
 
 .button:hover {
@@ -646,9 +691,6 @@ img {
     border-radius: 50%;
 }
 
-
-/* ------------------------------------- */
-
 .education_line {
     display: block;
     height: 90%;
@@ -717,43 +759,97 @@ img {
 }
 
 
-/* project in mind */
+/* ==========project flip card mobile========== */
 
 .project {
-    background-image: var(--background-yellow);
-    padding-bottom: 0;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    display: block;
     justify-content: center;
-    border-radius: .4rem;
+    align-items: center;
+    margin: .3rem auto;
+    padding: 3px 15px 0px 15px;
 }
 
-.project_container {
-    row-gap: 2rem;
+.card-img-top {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: .5rem auto;
+    border: .5rem solid rgb(253, 182, 182);
+    box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
 }
 
-.project_data {
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform: .5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.project_title,
-.project_description {
-    color: var(--first-color-lighten);
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    border: none;
+    box-shadow: none;
+    transform: .5s;
 }
 
-.project_description {
-    margin-bottom: var(--mb-4);
+.flip-card:hover .flip-card-back {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+    background-color: #FFFFFF;
+    color: black;
+    z-index: 1;
 }
 
-.project_img {
-    width: 220px;
-    justify-self: center;
-    margin: 1rem 1rem;
-    border: 2px solid var(--faded-blue);
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-back a {
+    padding: 1rem;
+    width: 100%;
+}
+
+.flip-card-front {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+    background-color: #FFFFFF;
+    color: black;
+    z-index: 1;
+    border: 1rem solid red;
+}
+
+.flip-card-back {
+    display: none;
+    position: relative;
+    background-color: #FFFFFF;
+    color: var(--first-color-darken);
+    transform: rotateY(180deg);
 }
 
 
-/* Works/projects */
+/* ==========project flip card mobile========== */
 
 .works_container {
     justify-content: center;
@@ -762,6 +858,9 @@ img {
 
 .works_img img {
     border-radius: .5rem;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .works_img {
@@ -917,13 +1016,68 @@ img {
     }
     .about_container,
     .skills_container,
-    .services_container,
-    .works_container,
     .contact_container,
     .contact_inputs {
         grid-template-columns: repeat(2, 1fr);
     }
-    /* ..................... */
+    .services_container,
+    .works_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* ============profile pic animation==============- */
+    .home_img {
+        width: 25%;
+        margin: 50px auto;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: .2rem;
+    }
+    .prof_pho {
+        max-width: 100%;
+        display: block;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
+        user-select: none;
+        border-radius: .2rem;
+    }
+    .prof_pho:hover {
+        border: .4rem solid #ce8981;
+        transition: .6s;
+        border-bottom-color: rgb(rgb(254, 173, 166));
+    }
+    .home_img::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(109, 94, 92, .3);
+        transition: .6s;
+        left: -1.5rem;
+        top: -1rem;
+        z-index: -2;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        position: absolute;
+    }
+    .home_img::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(151, 142, 140, .5);
+        transition: .4s;
+        left: -2.5rem;
+        top: -2rem;
+        z-index: -4;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        position: absolute;
+    }
+    .home_img:hover::before,
+    .home_img:hover::after {
+        left: 0;
+        top: 0;
+        transition: .5s;
+        background: rgba(5, 5, 5, 0.3);
+    }
+    /* ============profile pic animation==============- */
     .nav_list .far:hover {
         color: var(--first-color);
         transition: .2s;
@@ -964,27 +1118,35 @@ img {
     }
     .about_data {
         text-align: initial;
+        display: flex;
+        justify-content: space-between;
     }
     .about_description {
         margin-bottom: var(--mb-5);
     }
-    .about_img {
-        width: 220px;
-    }
-    .about_inf {
-        padding-left: 4rem;
-    }
     #about_card {
+        position: relative;
         border: .2rem solid #d3bfaf;
         opacity: 10;
+        width: 50vh;
+        height: 90vh;
         text-shadow: -1000px 1px 1px rgba(240, 119, 119, 0.9);
         background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    }
+    .about_infomation {
+        padding-bottom: 1rem;
+    }
+    #abt_2 {
+        margin-top: 5rem;
     }
     .card-body .intro_text {
         color: #532b2b;
         font-size: 1.5rem;
         opacity: .7;
         text-shadow: var(--shadow);
+    }
+    .about_infomation-data {
+        padding-bottom: 1rem;
     }
     .about_infomation-data span {
         color: #361d1d;
@@ -994,34 +1156,126 @@ img {
     .about_information {
         padding-left: 4rem;
     }
+    .education_content {
+        position: relative;
+    }
+    .education_content,
+    .education_race,
     .education_time {
         padding: 0 2rem;
+        padding-bottom: 2rem;
     }
+    /* ==========project flip card mobile========== */
     .project {
-        background: none;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: .3rem auto;
+        padding: 3px 15px 0px 15px;
     }
-    .project_container {
-        background-image: var(--background-yellow);
-        grid-template-columns: 2fr 1.2fr;
-        padding: 0 2rem;
-        border-radius: .5rem;
+    .flip-card {
+        display: block;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        font-weight: 600;
+        perspective: 1000px;
+        background-image: linear-gradient(to top, rgb(250, 189, 185) 100%, rgb(250, 189, 185) 100%);
     }
-    .project_data {
-        padding: 3rem 0;
+    .card-img-top {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: .5rem auto;
+        border: .5rem solid rgb(255, 253, 253);
+        box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
     }
-    .project_title,
-    .project_data {
-        text-align: initial;
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        transform: .5s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-    .project_data a {
-        color: var(--font-white);
+    .flip-card:hover .flip-card-inner {
+        transform: rotateZ('360deg');
+        border: none;
+        box-shadow: none;
+        transform: .5s;
     }
+    .flip-card:hover .flip-card-back {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        background-color: #FFFFFF;
+        color: black;
+        z-index: 1;
+    }
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flip-card-front {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        background-color: #FFFFFF;
+        color: black;
+        z-index: 1;
+        border: 1rem solid red;
+    }
+    .flip-card-back {
+        display: none;
+        position: relative;
+        background-color: #FFFFFF;
+        color: var(--first-color-darken);
+        transform: rotateY(180deg);
+    }
+    .flip-card-back,
+    h4,
+    p {
+        color: var(--first-color-darken);
+    }
+    .flip-card-back h4 {
+        color: #6e2511;
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        text-shadow: 1px -1px 1px rgba(46, 40, 40, 0.9);
+    }
+    .flip-card-back p {
+        transition: .5s;
+        font-size: 20px;
+        line-height: 3rem;
+    }
+    .flip-card-back p::first-letter {
+        font-size: 3rem;
+        color: rgb(241, 82, 82);
+        transition: .6s;
+        text-decoration: underline;
+        background: rgb(248, 237, 237);
+        padding: .2rem;
+        border-radius: .2rem;
+    }
+    .flip-card-back a {
+        display: none
+    }
+    /* ==========project flip card mobile========== */
     .about_img {
         display: none;
         visibility: hidden;
-    }
-    .project_img {
-        align-self: flex-ends;
     }
     .contact_inputs {
         display: grid;
@@ -1044,6 +1298,9 @@ img {
         color: var(--first-color-darken);
         border: none;
         background-image: var(--background-yellow);
+    }
+    .about_img {
+        width: 220px;
     }
     .footer_title {
         font-size: var(--h1-font-size);
@@ -1087,7 +1344,8 @@ img {
         text-shadow: 1px -1px 1px rgba(248, 244, 244, 0.9);
         background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
     }
-    .main {
+    .main,
+    .home {
         scroll-behavior: smooth;
     }
     .main_header {
@@ -1133,25 +1391,61 @@ img {
         padding-top: .8rem;
         min-width: 1027px;
     }
+    /* ============profile pic animation==============- */
     .home_img {
-        border-left: 1rem solid #6e2511;
-        border-right: 1rem solid #6e2511;
-        height: 310px;
-        width: 300px;
-        margin-top: -3rem;
-    }
-    .home_img img {
+        width: 20%;
+        margin: -2rem auto;
         position: relative;
-        top: -1rem;
-        margin-top: auto;
-        width: 300px;
-        height: 300px;
-        margin-left: -.4rem;
-        border-radius: .4em;
-        background-image: none;
-        overflow: hidden;
-        justify-content: center;
+        border-radius: .2rem;
     }
+    .prof_pho {
+        max-width: 100%;
+        display: block;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
+        user-select: none;
+        border-radius: .2rem;
+    }
+    .prof_pho:hover {
+        border: .4rem solid #ce8981;
+        transition: .6s;
+        border-bottom-color: rgb(rgb(254, 173, 166));
+    }
+    .home_img::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(109, 94, 92, .3);
+        transition: .6s;
+        left: 100%;
+        top: 0;
+        z-index: -5;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        position: absolute;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .home_img::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(121, 87, 79, 0.5);
+        transition: .6s;
+        left: 0%;
+        top: -100%;
+        z-index: -2;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        position: absolute;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .home_img:hover::before,
+    .home_img:hover::after {
+        left: 0;
+        top: 0;
+        transition: .5s;
+        background: rgba(5, 5, 5, 0.3);
+    }
+    /* ============profile pic animation==============- */
     .home_social-link {
         display: inline-flex;
         background-image: var(--background-black);
@@ -1177,7 +1471,7 @@ img {
     .home_title {
         color: #6e2511;
         font-size: 2rem;
-        padding-top: 2rem;
+        padding-top: 4rem;
         text-shadow: 1px -2px 1px rgba(46, 40, 40, 0.9);
     }
     .home_profession {
@@ -1316,27 +1610,120 @@ img {
     .works_container {
         grid-template-columns: repeat(3, 1fr);
     }
-    .project_container {
-        box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
-        color: var(--first-color-darken);
-        background-image: inherit
+    /* ==========project flip card mobile========== */
+    .project {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: center;
+        align-items: center;
+        margin: .3rem auto;
     }
-    .project_data .button {
+    .flip-card {
+        position: relative;
+        display: block;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        letter-spacing: 1px;
         color: #FFFFFF;
-        border-left: .8rem solid #FFFFFF;
-        border-right: .8rem solid #FFFFFF;
-        transition: ease-in;
-        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
+        font-weight: 600;
+        perspective: 1000px;
+        background-image: linear-gradient(to top, #c79081 100%, #dfa579 100%);
     }
-    .project_data .button:hover {
+    .flip-card:hover {
+        background: none;
+        padding: 0 2rem 0 2rem;
+        border-left: .7rem solid #FFFFFF;
+        border-right: .7rem solid #FFFFFF;
+        transform: .8s;
+        border-radius: .5rem;
+    }
+    .card-img-top {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: .5rem auto;
+        border: .5rem solid rgb(255, 253, 253);
+        box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-style: preserve-3d;
+        transform: .8s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY('100deg');
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        transform: .8s;
+    }
+    .flip-card:hover .flip-card-back {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        background-color: #FFFFFF;
+        color: black;
+        z-index: 1;
+        box-shadow: -20px 1px -10px rgba(7, 7, 7, 0.4);
+    }
+    .flip-card-back {
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .flip-card-back,
+    h4,
+    p {
+        text-align: center;
+        color: #050505;
+    }
+    .card-front p {
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        text-decoration: underline;
+    }
+    .flip-card-back h4 {
+        color: #000000;
+        font-size: 1.7rem;
+        text-shadow: 1px -1px 1px rgba(253, 250, 250, 0.9);
+    }
+    .flip-card-back a {
+        display: none
+    }
+    .flip-card-back p {
         color: #FFFFFF;
         transition: .5s;
-        background: #FFFFFF;
-        transition: ease-in-out;
-        border-left: .8rem solid #864a39;
-        border-right: .8rem solid #864a39;
-        text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.9);
+        font-size: 20px;
+        line-height: 2.3rem;
+        letter-spacing: 1px;
+        transform: .8s;
+        text-shadow: 1px -1px 1px rgba(253, 250, 250, 0.9);
     }
+    .flip-card-back p::first-letter {
+        font-size: 3rem;
+        color: rgb(121, 20, 20);
+        transition: .6s;
+        text-decoration: underline;
+        background: transparent;
+        padding: .2rem;
+        border-radius: .2rem;
+        text-shadow: 1px -3px 1px rgba(253, 250, 250, 0.9);
+    }
+    /* ==========project flip card mobile========== */
     .services_description {
         color: #4b0303;
         font-size: 1.2rem;

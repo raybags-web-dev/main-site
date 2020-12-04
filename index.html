@@ -58,7 +58,7 @@
             <div class="home_container" id="bd-grid">
                 <div class="home_data">
                     <div class="home_img">
-                        <img src="/public/img/works/ptofile_2.jpg" alt="profile-image" draggable="true">
+                        <img class="prof_pho" src="/public/img/works/ptofile_2.jpg" alt="profile-image" draggable="true">
                     </div>
                     <h1 class="home_title animated fadeIn slow">Raymond Baguma</h1>
                     <span class="home_profession">Frontend Developer</span>
@@ -108,7 +108,9 @@
                         </div>
                     </div>
                     <!-- Card -->
-                    <img src="/public/img/group_.jpg" class="about_img" alt="#">
+                    <div class="group_img">
+                        <img src="/public/img/group_.jpg" data-aos="fade-up" class="about_img" alt="#">
+                    </div>
                 </div>
 
                 <div class="about_inf">
@@ -158,8 +160,6 @@
                     </div>
                 </div>
             </div>
-            <!-- ------------------------------------------------- -->
-            <!-- ------------------------------------------------- -->
 
         </section>
 
@@ -229,9 +229,9 @@
 
             <div class="education_container bd-grid">
                 <div class="education_content">
-                    <div>
+                    <div class="class_year">
                         <h3 class="education_year" data-aos="fade-up">2018 - 2019</h3>
-                        <span class="education_university" data-aos="fade-up">Udemy Inc</span>
+                        <span class="education_university" data-aos="fade-up">Udemy Inc Online Computer Science</span>
                     </div>
 
                     <div class="education_time">
@@ -240,15 +240,15 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
-                        <span class="education_specialty" data-aos="fade-up">Frontend</span>
+                        <h3 class="education_race" data-aos="fade-up">Certificate Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Frontend JavaScript | HTML | CSS</span>
                     </div>
                 </div>
 
                 <div class="education_content">
-                    <div>
+                    <div class="class_year">
                         <h3 class="education_year" data-aos="fade-up">2019 - 2020</h3>
-                        <span class="education_university" data-aos="fade-up">Udemy Inc</span>
+                        <span class="education_university" data-aos="fade-up">Udemy Inc Online Computer Science</span>
                     </div>
 
                     <div class="education_time">
@@ -257,15 +257,15 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
-                        <span class="education_specialty" data-aos="fade-up">Designs|UX</span>
+                        <h3 class="education_race" data-aos="fade-up">Certificate Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Designs|User experience </span>
                     </div>
                 </div>
 
                 <div class="education_content">
-                    <div>
+                    <div class="class_year">
                         <h3 class="education_year" data-aos="fade-up">2020 - Now</h3>
-                        <span class="education_university" data-aos="fade-up">Udemy Inc</span>
+                        <span class="education_university" data-aos="fade-up">Udemy Inc Online Computer Science</span>
                     </div>
 
                     <div class="education_time">
@@ -274,8 +274,8 @@
                     </div>
 
                     <div>
-                        <h3 class="education_race" data-aos="fade-up">Diploma Software Development</h3>
-                        <span class="education_specialty" data-aos="fade-up">Backend</span>
+                        <h3 class="education_race" data-aos="fade-up">Certificate Software Development</h3>
+                        <span class="education_specialty" data-aos="fade-up">Backend javaScript | Node.JS</span>
                     </div>
                 </div>
 
@@ -323,19 +323,32 @@
             </div>
         </section>
 
-        <!-- project in mind -->
+        <!-- ======================project in mind flip-card======================= -->
         <section class="project section" data-aos="fade-up">
-            <div class="project_container bd-grid">
-                <div class="project_data">
-                    <h2 class="section-title project_title" data-aos="fade-up">Do you a project in mind ?</h2>
-                    <p class="project_description" data-aos="fade-up">You've been thinking about this project, and would like to bring it to life, well... I'm your guy. Dont hesitate to contact me. Just drop me a quick message here.</p>
-                    <a href="#contact" class="button button_light" id="contact_button" data-aos="fade-up">Contact Me</a>
+            <div class="card flip-card">
+                <div class="flip-card-inner">
+                    <div class="card-front animated">
+                        <img class="card-img-top" src="/public/img/prof_1.jpg" alt="Card image" data-aos="fade-up">
+                        <span><hr></span>
+                        <h3 class="card-title">Project on your mind?</h3>
+                        <a href="">
+                            <p id="flip_link" class="card-text animated slideIn">Hover on this card for details.</p>
+                        </a>
+                        <span><hr></span>
+                    </div>
+                    <div class="flip-card-back animated">
+                        <h4 class="" data-aos="fade-up">Great! Lets talk and get cooking.</h4>
+                        <span><hr></span>
+                        <p class="card-text" data-aos="fade-up">Based on your preferences, anything is possible. You've been thinking about it, that business you've always dreamed of building from the bottom, indeed You can!</p>
+                        <p class="card-text" data-aos="fade-up">All you gotta do is just reachout to me. You can send an email or a call. </p>
+                        <a href="#contact" class=" stretched-link"><i class="fas fa-link"></i></a>
+                    </div>
                 </div>
-                <img src="/public/img/porj_img.jpg" alt="" class="project_img" data-aos="fade-up">
             </div>
         </section>
+        <!-- ======================project in mind flip-card======================= -->
 
-        <!-- works -->
+        <!-- ========================works=================== -->
         <section class="works section" id="works">
             <span class="section-subtitle bd-grid" data-aos="fade-up">My portfolio</span>
             <h2 class="section-title" data-aos="fade-up">Recent Works</h2>

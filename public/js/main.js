@@ -10,7 +10,6 @@ const spinnerIcon = document.getElementById('spinner');
 const cards = document.querySelectorAll('#cards_services');
 const links = document.querySelectorAll('.nav_list');
 
-
 // card animation
 flipCard();
 // animation module
@@ -62,15 +61,15 @@ let lastId,
     topMenuHeight = topMenu.outerHeight()
 
 // All list items
-menuItems = topMenu.find("a"),
+let menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function() {
+
         let item = $($(this).attr("href"));
-        if (item.length) { return item; }
+        return (item.length) ? item : false;
     });
 
 // Bind click handler to menu items
-// so we can get a fancy scroll animation
 menuItems.click(function(e) {
     let href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
