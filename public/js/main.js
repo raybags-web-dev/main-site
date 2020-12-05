@@ -9,6 +9,10 @@ const closeButton = document.querySelector('#nav-close .fas');
 const spinnerIcon = document.getElementById('spinner');
 const cards = document.querySelectorAll('#cards_services');
 const links = document.querySelectorAll('.nav_list');
+const links_items = document.querySelectorAll('.nav_list li');
+
+const top_button = document.getElementById('scroll_top_btn');
+
 
 // card animation
 flipCard();
@@ -17,6 +21,15 @@ animation_module;
 // Show
 toggleMenu.addEventListener('click', () => {
     navMenu.classList.toggle('show');
+
+    links_items.forEach(a => {
+        a.classList.remove('fadeInLeft');
+        a.classList.add('fadeInUpBig');
+        a.style.cssText = "display: flex; padding-top: 1.8rem; letter-spacing: 1px; text-shadow: 1px -2px 1px rgb(0,0,0,.4); transition: .8s; color: #FFFFFF; display: block; width: 100%; margin-top: 3rem; display: flex; justify-content: space-around;";
+        setTimeout(() => {
+            a.classList.contains('fadeInUpBig') ? a.classList.remove('fadeInUpBig') : 0
+        }, 1000)
+    });
     closeButton.style.cssText = '';
 });
 
@@ -30,6 +43,12 @@ $(window).on('load', () => {
 // Hide
 closeMenu.addEventListener('click', () => {
     navMenu.classList.remove('show');
+    links_items.forEach(a => {
+        a.classList.add('slideOutRight');
+        (a.classList.contains('slideOutRight')) ? a.classList.remove('slideOutRight'): 0
+
+        a.style.cssText = ""
+    });
     closeButton.style.cssText = 'color: red;'
 })
 
@@ -53,6 +72,27 @@ function flipCard() {
 };
 // handle clicks on links
 navLink.forEach(n => n.addEventListener('click', linkAction));
+
+// ===========scroll top button functionality===========
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1200) {
+            $(top_button).addClass('slideInRight')
+            $(top_button).fadeIn();
+        } else {
+            $(top_button).fadeOut();
+        }
+    });
+    $(top_button).click(function() {
+        $(top_button).addClass('slideOutRight')
+        $("html, body").animate({ scrollTop: 0 }, 700);
+        setTimeout(function() {
+            $(top_button).removeClass('slideOutRight')
+        }, 1500)
+        return false;
+    });
+});
+// ===========scroll top button functionality===========
 
 // scrollSpy
 // Cache selectors
