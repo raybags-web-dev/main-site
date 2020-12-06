@@ -2,6 +2,7 @@
 //Menu show hidden
 import { animation_module } from './animations.js';
 
+const all_divs = document.querySelectorAll('div');
 const navMenu = document.getElementById('nav-menu');
 const toggleMenu = document.getElementById('nav-toggle');
 const closeMenu = document.getElementById('nav-close');
@@ -73,6 +74,14 @@ function flipCard() {
 // handle clicks on links
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+
+// =========Hide top button onloade==========
+const hide_top_button = function() {
+    return $(document).ready(function() {
+        $(top_button).hide();
+    });
+}
+hide_top_button();
 // ===========scroll top button functionality===========
 $(document).ready(function() {
     $(window).scroll(function() {
@@ -80,7 +89,7 @@ $(document).ready(function() {
             $(top_button).addClass('slideInRight')
             $(top_button).fadeIn();
         } else {
-            $(top_button).fadeOut();
+            $(top_button).slideUp();
         }
     });
     $(top_button).click(function() {
@@ -92,52 +101,34 @@ $(document).ready(function() {
         return false;
     });
 });
-// ===========scroll top button functionality===========
 
-// scrollSpy
-// Cache selectors
-let lastId,
-    topMenu = $(links),
-    topMenuHeight = topMenu.outerHeight()
+//=====scrollSpy function============
+function scrollSpy() {
+    let sections = ['home', 'about', 'skills', 'services', 'works', 'contact'];
+    let current;
 
-// All list items
-let menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function() {
-
-        let item = $($(this).attr("href"));
-        return (item.length) ? item : false;
-    });
-
-// Bind click handler to menu items
-menuItems.click(function(e) {
-    let href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-    $('html, body').stop().animate({
-        scrollTop: offsetTop
+    for (let i = 0; i < sections.length; i++) {
+        if ($('#' + sections[i]).offset().top <= $(window).scrollTop()) {
+            current = sections[i];
+        }
+    }
+    $(".nav_list a[href='#" + current + "']").addClass('active');
+    $(".nav_list a").not("a[href='#" + current + "']").removeClass('active');
+}
+// smooth scrolling navigation
+$(".nav_list a").click(function() {
+    let target = $(this).attr("href");
+    $("body, html").animate({
+        scrollTop: $(target).offset().top
     }, 300);
-    e.preventDefault();
+    return false;
 });
 
-// Bind to scroll
+//scrollSpy call
+$(document).ready(function() {
+    scrollSpy();
+});
+
 $(window).scroll(function() {
-    // container scroll position
-    let fromTop = $(this).scrollTop() + topMenuHeight;
-
-    // id of current scroll item
-    let cur = scrollItems.map(function() {
-        if ($(this).offset().top < fromTop)
-            return this;
-    });
-    // the id of the current element
-    cur = cur[cur.length - 1];
-    let id = cur && cur.length ? cur[0].id : "";
-
-    if (lastId !== id) {
-        lastId = id;
-        //remove active class
-        menuItems
-            .parent().removeClass("active")
-            .end().filter("[href='#" + id + "']").parent().addClass("active");
-    }
+    scrollSpy();
 });

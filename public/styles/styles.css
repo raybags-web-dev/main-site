@@ -623,8 +623,19 @@ a {
     width: 65%;
 }
 
-.skills_bootstrap {
-    width: 80%;
+.egg {
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    z-index: -9999;
+    background-repeat: repeat;
+    background-color: rgb(250, 210, 210);
+    transition: 2s;
+    transform-style: preserve-3d;
+    display: block;
+    border: 5rem solid rgb(250, 210, 210);
+    box-shadow: -10px 10px 10px rgba(209, 65, 65, 0.4);
+    border-radius: 0% 200% 200% 200% / 200% 200% 0% 200%;
 }
 
 
@@ -1469,12 +1480,12 @@ a {
     }
     .home_img::before {
         content: "";
-        width: 100%;
-        height: 100%;
-        background: rgba(252, 2, 2, 0.3);
+        width: 99%;
+        height: 150%;
+        left: -50%;
+        top: -26%;
+        background: rgba(255, 0, 0, 0.3);
         transition: .6s;
-        left: -13%;
-        top: -13%;
         z-index: 10;
         border-radius: .2rem;
         box-sizing: border-box;
@@ -1484,11 +1495,11 @@ a {
     .home_img::after {
         content: "";
         width: 100%;
-        height: 100%;
-        background: rgba(241, 66, 26, 0.5);
+        height: 150%;
+        background: rgba(250, 249, 249, 0.5);
         transition: .6s;
-        left: -25%;
-        top: -25%;
+        left: 49%;
+        top: -26%;
         z-index: -2;
         border-radius: .2rem;
         box-sizing: border-box;
@@ -1497,14 +1508,16 @@ a {
     }
     .home_img:hover::before,
     .home_img:hover::after {
+        position: absolute;
         left: 0;
         top: 0;
+        height: 100%;
         transition: .5s;
-        border-left: .8rem solid rgb(155, 86, 86);
-        border-right: .8rem solid rgb(155, 86, 86);
+        border-left: 1rem solid rgb(155, 86, 86);
+        border-right: 1rem solid rgb(155, 86, 86);
         padding-left: 1rem;
         padding-right: 1rem;
-        background: rgba(5, 5, 5, 0.3);
+        background: rgba(8, 0, 0, 0.3);
     }
     /* ============profile pic animation==============- */
     .home_social-link {
