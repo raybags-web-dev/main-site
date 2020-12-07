@@ -1,19 +1,15 @@
 'use strict';
 //Menu show hidden
-import { animation_module } from './animations.js';
+import { animation_module, coverImage_manipulator } from './animations.js';
 
-const all_divs = document.querySelectorAll('div');
 const navMenu = document.getElementById('nav-menu');
 const toggleMenu = document.getElementById('nav-toggle');
 const closeMenu = document.getElementById('nav-close');
 const closeButton = document.querySelector('#nav-close .fas');
 const spinnerIcon = document.getElementById('spinner');
 const cards = document.querySelectorAll('#cards_services');
-const links = document.querySelectorAll('.nav_list');
 const links_items = document.querySelectorAll('.nav_list li');
-
 const top_button = document.getElementById('scroll_top_btn');
-
 
 // card animation
 flipCard();

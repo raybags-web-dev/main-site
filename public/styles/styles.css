@@ -1979,7 +1979,7 @@ a {
     /* =============scroll top button============== */
     #scroll_top_btn {
         position: fixed;
-        left: 96%;
+        left: 98%;
         top: 60%;
         cursor: pointer;
         opacity: .6;
@@ -2003,6 +2003,7 @@ a {
         box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
     }
     /* =============scroll top button============== */
+    /* ===========fullpage image */
     .footer {
         position: relative;
         margin-left: -7rem;
