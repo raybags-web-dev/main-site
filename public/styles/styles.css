@@ -56,7 +56,7 @@
     --z-fixed: 100;
     --ontop: 100;
     /* box shaddow */
-    --shadow: 2px 2px 12px rgb(0, 0, 0, .4)
+    --shadow: 2px 2px 12px rgb(0, 0, 0, .4);
 }
 
 @media screen and (min-width: 768px) {
@@ -121,6 +121,10 @@ a {
 
 .remove {
     display: none;
+}
+
+.glass_effect {
+    backdrop-filter: blur(20px);
 }
 
 
@@ -356,6 +360,43 @@ a {
     font-size: 1.3rem;
     cursor: pointer;
 }
+
+
+/* ==========standard card shaddiw================ */
+
+.card_shadow {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.card_shadow:before,
+.card_shadow:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.card_shadow:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+
+/* ============standard inner shaddow=========== */
 
 
 /* Show menu */
@@ -732,6 +773,7 @@ a {
     border: 2px solid var(--first-color);
     border-radius: .5rem;
     text-align: center;
+    backdrop-filter: blur(20px);
 }
 
 .services_icon {
@@ -789,85 +831,6 @@ a {
     padding: 3px 15px 0px 15px;
 }
 
-.card-img-top {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin: .5rem auto;
-    border: .5rem solid rgb(253, 182, 182);
-    box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    transform: .5s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    border: none;
-    box-shadow: none;
-    transform: .5s;
-}
-
-.flip-card:hover .flip-card-back {
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 1rem;
-    background-color: #FFFFFF;
-    color: black;
-    z-index: 1;
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-back a {
-    padding: 1rem;
-    width: 100%;
-}
-
-.flip-card-front {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 1rem;
-    background-color: #FFFFFF;
-    color: black;
-    z-index: 1;
-    border: 1rem solid red;
-}
-
-.flip-card-back {
-    display: none;
-    position: relative;
-    background-color: #FFFFFF;
-    color: var(--first-color-darken);
-    transform: rotateY(180deg);
-}
-
 
 /* ==========project flip card mobile========== */
 
@@ -881,6 +844,7 @@ a {
     margin: auto;
     width: 100%;
     height: 100%;
+    backdrop-filter: blur(20px);
 }
 
 .works_img {
@@ -1214,105 +1178,6 @@ a {
         margin: .3rem auto;
         padding: 3px 15px 0px 15px;
     }
-    .flip-card {
-        display: block;
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-        letter-spacing: 1px;
-        color: #FFFFFF;
-        font-weight: 600;
-        perspective: 1000px;
-        background-image: linear-gradient(to top, rgb(250, 189, 185) 100%, rgb(250, 189, 185) 100%);
-    }
-    .card-img-top {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        margin: .5rem auto;
-        border: .5rem solid rgb(255, 253, 253);
-        box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
-    }
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        transform: .5s;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-    .flip-card:hover .flip-card-inner {
-        transform: rotateZ('360deg');
-        border: none;
-        box-shadow: none;
-        transform: .5s;
-    }
-    .flip-card:hover .flip-card-back {
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 1rem;
-        background-color: #FFFFFF;
-        color: black;
-        z-index: 1;
-    }
-    .flip-card-front,
-    .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-    .flip-card-front {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 1rem;
-        background-color: #FFFFFF;
-        color: black;
-        z-index: 1;
-        border: 1rem solid red;
-    }
-    .flip-card-back {
-        display: none;
-        position: relative;
-        background-color: #FFFFFF;
-        color: var(--first-color-darken);
-        transform: rotateY(180deg);
-    }
-    .flip-card-back,
-    h4,
-    p {
-        color: var(--first-color-darken);
-    }
-    .flip-card-back h4 {
-        color: #6e2511;
-        font-size: 1.5rem;
-        padding-top: 2rem;
-        text-shadow: 1px -1px 1px rgba(46, 40, 40, 0.9);
-    }
-    .flip-card-back p {
-        transition: .5s;
-        font-size: 20px;
-        line-height: 3rem;
-    }
-    .flip-card-back p::first-letter {
-        font-size: 3rem;
-        color: rgb(241, 82, 82);
-        transition: .6s;
-        text-decoration: underline;
-        background: rgb(248, 237, 237);
-        padding: .2rem;
-        border-radius: .2rem;
-    }
-    .flip-card-back a {
-        display: none
-    }
     /* ==========project flip card mobile========== */
     .about_img {
         display: none;
@@ -1469,56 +1334,110 @@ a {
     .prof_pho {
         max-width: 100%;
         display: block;
+        transition: .7s;
         box-shadow: 2px 2px 12px rgb(0, 0, 0, .4);
         user-select: none;
-        border-radius: .2rem;
+        border-radius: .5rem;
     }
     .prof_pho:hover {
         border: .4rem solid #ce8981;
-        transition: .6s;
-        border-bottom-color: rgb(rgb(254, 173, 166));
+        transition: .7s;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: .5rem;
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow: inset 0 0 10px #000000;
+        border-radius: 50rem 50rem 50rem 50rem / 0rem 0rem 50rem 50rem;
+        border-bottom-color: rgb(rgb(241, 113, 101));
     }
-    .home_img::before {
+    .profile_img_shadow_1::before {
+        content: "";
+        position: absolute;
+        width: 299%;
+        height: 1800%;
+        left: -250%;
+        top: -26%;
+        transition: .7s;
+        z-index: -10;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        background: rgba(3, 3, 3, 0.3);
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .profile_img_shadow_2::after {
+        content: "";
+        position: absolute;
+        width: 251%;
+        height: 1800%;
+        transition: .7s;
+        left: 49%;
+        top: -26%;
+        z-index: -10;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        background: rgba(250, 249, 249, 0.5);
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .shadow_1::before {
         content: "";
         width: 99%;
-        height: 150%;
+        height: 215%;
         left: -50%;
         top: -26%;
         background: rgba(255, 0, 0, 0.3);
-        transition: .6s;
-        z-index: 10;
+        transition: .7s;
+        z-index: -10;
         border-radius: .2rem;
         box-sizing: border-box;
         position: absolute;
         box-shadow: 2px 2px 12px rgb(0, 0, 0);
     }
-    .home_img::after {
+    .shadow_2::after {
         content: "";
+        position: absolute;
         width: 100%;
-        height: 150%;
-        background: rgba(250, 249, 249, 0.5);
-        transition: .6s;
+        height: 215%;
         left: 49%;
         top: -26%;
-        z-index: -2;
+        z-index: -10;
+        transition: .7s;
+        border-radius: .2rem;
+        box-sizing: border-box;
+        background: rgba(250, 249, 249, 0.5);
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .shadow_1:hover::before {
+        content: "";
+        width: 100%;
+        height: 210%;
+        position: absolute;
+        transition: .7s;
+        left: 49%;
+        top: -26%;
+        z-index: -20;
+        cursor: pointer;
+        border-radius: .2rem;
+        background: rgba(255, 0, 0, 0.3);
+        box-sizing: border-box;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0);
+    }
+    .shadow_2:hover::after {
+        content: "";
+        width: 99%;
+        height: 210%;
+        left: -50%;
+        top: -26%;
+        transition: .7s;
+        cursor: zoom-in;
+        z-index: -20;
         border-radius: .2rem;
         box-sizing: border-box;
         position: absolute;
+        background: rgba(250, 249, 249, 0.5);
         box-shadow: 2px 2px 12px rgb(0, 0, 0);
     }
-    .home_img:hover::before,
-    .home_img:hover::after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        transition: .5s;
-        border-left: 1rem solid rgb(155, 86, 86);
-        border-right: 1rem solid rgb(155, 86, 86);
-        padding-left: 1rem;
-        padding-right: 1rem;
-        background: rgba(8, 0, 0, 0.3);
-    }
+    /* ==================underline psudo elemnet style */
     /* ============profile pic animation==============- */
     .home_social-link {
         display: inline-flex;
@@ -1539,12 +1458,32 @@ a {
         color: #6e1d07;
         box-shadow: var(--shadow);
     }
-    .home_title {
-        color: #6e2511;
-        font-size: 2rem;
-        padding-top: 4rem;
+    /* .home_title {
         text-shadow: 1px -2px 1px rgba(46, 40, 40, 0.9);
+    } */
+    /* ==========Text 3d style=========== */
+    .text_3D_main {
+        font-size: 3em;
+        font-weight: 700;
+        padding-top: 4rem;
+        color: #6e2511;
+        user-select: none;
+        text-shadow: 1px 1px 1px #080808, 1px 2px 1px #070707, 1px 3px 1px #030303, 1px 4px 1px #020202, 1px 5px 1px #771f1f, 1px 6px 1px #030303, 1px 7px 1px #070000, 1px 8px 1px #030303, 1px 9px 1px #070000, 1px 10px 1px #050000, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(117, 4, 4, 0.2), 1px 30px 60px rgba(7, 0, 0, 0.4);
     }
+    .text_3D {
+        font-size: 2em;
+        font-weight: 700;
+        color: #f5f5f5;
+        backdrop-filter: blur(20px);
+        text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #fdfcfc, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    }
+    .home_title span {
+        color: white;
+        font-weight: 700;
+        padding-top: 4rem;
+        text-shadow: 1px 1px 1px #faf8f8, 1px 2px 1px #ddd7d7, 1px 3px 1px #fdfcfc, 1px 4px 1px #ee1111, 1px 5px 1px #fcfbfb, 1px 6px 1px #573737, 1px 7px 1px #fcf8f8, 1px 8px 1px #faf8f8, 1px 9px 1px #fcf9f9, 1px 10px 1px #fcfcfc, 1px 18px 6px rgba(253, 251, 251, 0.4), 1px 22px 10px rgba(253, 250, 250, 0.2), 1px 25px 35px rgba(253, 252, 252, 0.2), 1px 30px 60px rgba(250, 247, 247, 0.4);
+    }
+    /* ===============Text 3d style */
     .home_profession {
         text-shadow: 1px 1px 1px rgba(190, 177, 177, 0.9);
         color: rgb(252, 244, 244);
@@ -1612,8 +1551,7 @@ a {
     }
     /* about */
     .about_container {
-        height: 100vh;
-        width: 100vw;
+        display: none;
     }
     .about_inf {
         margin-left: 5rem;
@@ -1693,118 +1631,37 @@ a {
     .works_container {
         grid-template-columns: repeat(3, 1fr);
     }
-    /* ==========project flip card mobile========== */
+    /* ==========project container ========== */
     .project {
         position: relative;
-        display: block;
-        width: 100%;
+        width: 67vw;
         height: 100%;
-        padding-left: 10%;
-        padding-right: 10%;
-        justify-content: center;
-        align-items: center;
-        margin: .3rem auto;
+        margin: 1rem auto;
+        backdrop-filter: blur(20px);
+        box-shadow: -10px 10px 10px rgb(0, 0, 0, .4);
+        border-left: .6rem solid #FFFFFF;
+        border-right: .6rem solid #FFFFFF;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        transition: .5;
+        border-top-left-radius: .9rem;
+        border-top-right-radius: .9rem;
+        border-bottom-left-radius: .9rem;
+        border-bottom-right-radius: .9rem;
     }
-    .flip-card {
+    /* ==========project flip card mobile========== */
+    .project_btn {
         position: relative;
-        display: block;
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-        letter-spacing: 1px;
-        color: #FFFFFF;
-        font-weight: 600;
-        perspective: 1000px;
-        background-image: linear-gradient(to top, #c79081 100%, #dfa579 100%);
-    }
-    .flip-card:hover {
-        background: none;
-        padding: 0 2rem 0 2rem;
-        border-left: .7rem solid #FFFFFF;
-        border-right: .7rem solid #FFFFFF;
-        transform: .8s;
-        border-radius: .5rem;
-    }
-    .card-img-top {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        margin: .5rem auto;
-        border: .5rem solid rgb(255, 253, 253);
-        box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
-    }
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transform-style: preserve-3d;
-        transform: .8s;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-    .flip-card:hover .flip-card-inner {
-        transform: rotateY('100deg');
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-        transform: .8s;
-    }
-    .flip-card:hover .flip-card-back {
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 1rem;
-        background-color: #FFFFFF;
         color: black;
-        z-index: 1;
-        box-shadow: -20px 1px -10px rgba(7, 7, 7, 0.4);
-    }
-    .flip-card-back {
-        display: none;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    .flip-card-back,
-    h4,
-    p {
-        text-align: center;
-        color: #050505;
-    }
-    .card-front p {
-        text-align: center;
-        color: white;
-        font-size: 15px;
-        text-decoration: underline;
-    }
-    .flip-card-back h4 {
-        color: #000000;
-        font-size: 1.7rem;
-        text-shadow: 1px -1px 1px rgba(253, 250, 250, 0.9);
-    }
-    .flip-card-back a {
-        display: none
-    }
-    .flip-card-back p {
-        color: #FFFFFF;
-        transition: .5s;
-        font-size: 20px;
-        line-height: 2.3rem;
-        letter-spacing: 1px;
-        transform: .8s;
-        text-shadow: 1px -1px 1px rgba(253, 250, 250, 0.9);
-    }
-    .flip-card-back p::first-letter {
-        font-size: 3rem;
-        color: rgb(121, 20, 20);
-        transition: .6s;
-        text-decoration: underline;
-        background: transparent;
-        padding: .2rem;
-        border-radius: .2rem;
-        text-shadow: 1px -3px 1px rgba(253, 250, 250, 0.9);
+        transition: .9s;
+        width: 10rem;
+        height: 2.5rem;
+        font-size: .7rem;
+        margin: .5rem auto;
+        backdrop-filter: blur(20px);
+        border-left: .8rem solid #913b3b;
+        border-right: .8rem solid #913b3b;
+        box-shadow: 10px 8px 6px -6px black;
     }
     /* ==========project flip card mobile========== */
     .services_description {
@@ -1827,6 +1684,7 @@ a {
         border-top: 1px solid #FFFFFF;
         border-bottom: 1px solid #FFFFFF;
         transition: .5;
+        backdrop-filter: blur(20px);
         border-top-left-radius: .9rem;
         border-top-right-radius: .9rem;
         border-bottom-left-radius: .9rem;
@@ -1864,13 +1722,6 @@ a {
         justify-content: center;
         row-gap: 2rem;
     }
-    .works_img img {
-        border-radius: .5rem;
-        height: 200px;
-        width: 300px;
-        border: 2rem solid rgb(206, 116, 116);
-        box-shadow: 2px 100px 20px rgb(0, 0, 0, .4);
-    }
     .works_img {
         position: relative;
         /* overflow: hidden; */
@@ -1904,33 +1755,38 @@ a {
         color: var(--first-color-lighten);
     }
     .works_img img {
-        border: 2rem solid #b97765;
+        border-radius: .5rem;
+        height: 200px;
+        width: 300px;
+        backdrop-filter: blur(20px);
+        border: 2rem solid rgba(65, 58, 58, 0.3);
+        box-shadow: 2px 100px 20px rgba(0, 0, 0, 0.4);
     }
     .works_img:hover .works_data {
         bottom: 0;
         cursor: pointer;
     }
-    input:focus-within {
+    input:focus {
         box-shadow: var(--shadow);
         font-size: var(--font-medium);
-        color: black;
-        border-left: 7px solid #502626;
-        border-right: 7px solid #502626;
+        color: rgb(78, 75, 75);
+        border-left: 8px solid #502626;
+        border-right: 8px solid #502626;
         letter-spacing: 1px;
         font-weight: var(--font-semi-bold);
         background-image: var(--background-white);
-        transition: 1s;
+        transition: .5s !important;
     }
-    textarea:focus-within {
-        box-shadow: var(--shadow);
+    textarea:focus {
+        transition: .5s !important;
+        box-shadow: 0 8px 6px -6px black;
         font-size: var(--font-medium);
-        color: black;
+        color: rgb(78, 75, 75);
         font-weight: var(--font-semi-bold);
         letter-spacing: 1px;
-        border-left: 7px solid #864a39;
-        border-right: 7px solid #864a39;
+        border-left: 8px solid #864a39;
+        border-right: 8px solid #864a39;
         background-image: var(--background-white);
-        transition: .8s;
     }
     /* contacts */
     .contact_input {
@@ -1939,18 +1795,21 @@ a {
         outline: none;
         border: none;
         background-image: #864a39;
-        box-shadow: var(--shadow);
+        box-shadow: 0 8px 6px -6px black;
         font-size: var(--normal-font-size);
         margin-bottom: var(--mb-2);
         border-radius: .4rem;
         transition: .8s;
     }
     .contact_info .contact_text {
-        color: #FFFFFF;
+        color: #864a39;
+        font-size: 20px;
         padding: .3rem;
         border-radius: .4rem;
+        font-weight: 200;
         letter-spacing: 2px;
         height: 3rem;
+        text-shadow: 1px 1px 1px rgba(61, 6, 6, 0.4);
     }
     #submit_btn {
         position: relative;
@@ -1961,7 +1820,7 @@ a {
         font-size: 1.1rem;
         border-left: .8rem solid #FFFFFF;
         border-right: .8rem solid #FFFFFF;
-        text-shadow: 1px -1px 1px rgba(7, 7, 7, 0.9);
+        box-shadow: 10px 8px 6px -6px black;
     }
     #submit_btn:hover {
         color: #743939;
@@ -1975,6 +1834,7 @@ a {
     /* footer */
     main {
         padding-bottom: 5rem;
+        box-shadow: 0 8px 6px -6px black;
     }
     /* =============scroll top button============== */
     #scroll_top_btn {
@@ -1993,7 +1853,6 @@ a {
         transition: .5s;
         border-bottom-left-radius: .1rem;
         border-left: 4px solid rgb(141, 73, 73);
-        ;
     }
     .top_bt {
         background: rgb(80, 38, 38);
@@ -2010,6 +1869,7 @@ a {
         background: #502626;
         bottom: -10%;
         padding-bottom: 0%;
+        box-shadow: 2px 2px 14px rgb(0, 0, 0, .4);
     }
     .footer_container {
         margin-bottom: -10rem;

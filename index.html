@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Raymond-bags | web-dev</title>
 
     <!-- ====Font awesome CDN==== -->
@@ -23,7 +23,7 @@
 
 <body>
     <!-- ===Spinner==== -->
-    <div id="spinner" class="spinner-border" style="width: 7rem; height: 7rem; color: rgb(248, 247, 247);" role="status">
+    <div id="spinner" class="spinner-borderm" style="width: 7rem; height: 7rem; color: rgb(248, 247, 247);" role="status">
         <span class="sr-only">Loading...</span>
     </div>
     <!-- ===spinner==== -->
@@ -40,7 +40,7 @@
                     <i class="fas fa-times"></i>
                 </div>
 
-                <ul class="nav_list">
+                <ul class="nav_list card_shadow">
                     <li class="nav_item animated fadeInLeft"><a href="#home" class="nav_link active"><i class="fas fa-home"></i>Home</a></li>
                     <li class="nav_item animated fadeInLeft"><a href="#about" class="nav_link "><i class="far fa-id-badge"></i>About</a></li>
                     <li class="nav_item animated fadeInLeft"><a href="#skills" class="nav_link "><i class="fas fa-tools"></i>Skills</a></li>
@@ -60,10 +60,10 @@
                     <div class="home_img animated">
                         <img class="prof_pho animated" src="/public/img/works/ptofile_2.jpg" alt="profile-image" draggable="true">
                     </div>
-                    <h1 class="home_title animated fadeIn slow">Raymond Baguma</h1>
-                    <span class="home_profession">Frontend Developer</span>
+                    <h1 class="home_title animated fadeIn slow text_3D_main">Raymond <span>Baguma</span> </h1>
+                    <span class="home_profession text_3D_paragraph">Frontend Developer</span>
 
-                    <div class="home_social">
+                    <div class="home_social animated pulse slower infinite">
                         <a id="link_1" href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="home_social-link animated slideInLeft"><i class="fab fa-linkedin"></i></a>
                         <a id="link_2" href="https://github.com/raybags-web-dev" target="_blank" class="home_social-link animated fadeIn"><i class="fab fa-github-square"></i></a>
                         <a id="link_3" href="https://www.hackerrank.com/baguma_github" target="_blank" class="home_social-link animated slideInRight"><i class="fab fa-hackerrank"></i></a>
@@ -81,14 +81,14 @@
         <!-- about -->
         <section class="about section" id="about">
             <span class="section-subtitle bd-grid">My Story</span>
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title text_3D">About Me</h2>
 
             <div class="about_container bd-grid">
                 <div class="about_data">
                     <div id="about_card" class="card card-cascade wider reverse" data-aos="fade-up">
 
                         <!-- Card image -->
-                        <div id="abt_img" class="view view-cascade overlay ">
+                        <div id="abt_img" class="view view-cascade overlay pattern-2">
                             <img class="card-img-top" src="/public/img/works/ptofile_2.jpg" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
@@ -160,72 +160,75 @@
                     </div>
                 </div>
             </div>
+            <!-- ===========about section big screen -->
 
+
+            <!-- ===========about section big screen========= -->
         </section>
 
         <!-- skills -->
-        <section class="skills section" id="skills">
-            <span class="section-subtitle bd-grid animated fadeIn slow" data-aos="fade-up">Why I'm the best candidate for the job</span>
-            <h2 class="section-title animated fadeIn delay-1s" data-aos="fade-up">My expertise Area</h2>
+        <section class="skills section" id="skills"></section>
+        <span class="section-subtitle bd-grid animated fadeIn slow text_3D_paragraph" data-aos="fade-up">Why I'm the best candidate for the job</span>
+        <h2 class="section-title animated fadeIn delay-1s text_3D" data-aos="fade-up">My expertise Area</h2>
 
-            <div class="skills_container bd-grid">
+        <div class="skills_container bd-grid">
 
-                <div class="skills_content">
-                    <h3 class="skills_subtitle" data-aos="fade-up">Frontend</h3>
+            <div class="skills_content">
+                <h3 class="skills_subtitle" data-aos="fade-up">Frontend</h3>
 
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">HTML/CSS</span>
-                        <span class="skills_number" data-aos="fade-up">85%</span>
-                        <span class="skills_bar skills_html" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">Javascript</span>
-                        <span class="skills_number" data-aos="fade-up">80%</span>
-                        <span class="skills_bar skills_js" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">Vue.js</span>
-                        <span class="skills_number" data-aos="fade-up">65%</span>
-                        <span class="skills_bar skills_vue" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">Bootstrap</span>
-                        <span class="skills_number" data-aos="fade-up">80%</span>
-                        <span class="skills_bar skills_bootstrap" data-aos="fade-up"></span>
-                    </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">HTML/CSS</span>
+                    <span class="skills_number" data-aos="fade-up">85%</span>
+                    <span class="skills_bar skills_html" data-aos="fade-up"></span>
                 </div>
-                <div class="skills_content">
-                    <h3 class="skills_subtitle" data-aos="fade-up">Backend</h3>
-
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">Node js</span>
-                        <span class="skills_number" data-aos="fade-up">60%</span>
-                        <span class="skills_bar skills_nodejs" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">Javascript</span>
-                        <span class="skills_number" data-aos="fade-up">80%</span>
-                        <span class="skills_bar skills_js" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">MongoDB</span>
-                        <span class="skills_number" data-aos="fade-up">75%</span>
-                        <span class="skills_bar skills_mongodb" data-aos="fade-up"></span>
-                    </div>
-                    <div class="skills_data">
-                        <span class="skills_name" data-aos="fade-up">jQuery</span>
-                        <span class="skills_number" data-aos="fade-up">70%</span>
-                        <span class="skills_bar skills_jquery" data-aos="fade-up"></span>
-                    </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">Javascript</span>
+                    <span class="skills_number" data-aos="fade-up">80%</span>
+                    <span class="skills_bar skills_js" data-aos="fade-up"></span>
+                </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">Vue.js</span>
+                    <span class="skills_number" data-aos="fade-up">65%</span>
+                    <span class="skills_bar skills_vue" data-aos="fade-up"></span>
+                </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">Bootstrap</span>
+                    <span class="skills_number" data-aos="fade-up">80%</span>
+                    <span class="skills_bar skills_bootstrap" data-aos="fade-up"></span>
                 </div>
             </div>
+            <div class="skills_content">
+                <h3 class="skills_subtitle" data-aos="fade-up">Backend</h3>
+
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">Node js</span>
+                    <span class="skills_number" data-aos="fade-up">60%</span>
+                    <span class="skills_bar skills_nodejs" data-aos="fade-up"></span>
+                </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">Javascript</span>
+                    <span class="skills_number" data-aos="fade-up">80%</span>
+                    <span class="skills_bar skills_js" data-aos="fade-up"></span>
+                </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">MongoDB</span>
+                    <span class="skills_number" data-aos="fade-up">75%</span>
+                    <span class="skills_bar skills_mongodb" data-aos="fade-up"></span>
+                </div>
+                <div class="skills_data">
+                    <span class="skills_name" data-aos="fade-up">jQuery</span>
+                    <span class="skills_number" data-aos="fade-up">70%</span>
+                    <span class="skills_bar skills_jquery" data-aos="fade-up"></span>
+                </div>
+            </div>
+        </div>
 
         </section>
 
         <!-- education -->
         <section class="eduction section">
             <span class="section-subtitle bd-grid" data-aos="fade-up">Qualification</span>
-            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <h2 class="section-title text_3D" data-aos="fade-up">Education</h2>
 
             <div class="education_container bd-grid">
                 <div class="education_content">
@@ -285,37 +288,37 @@
         <!-- services -->
         <section class="services section" id="services">
             <span class="section-subtitle bd-grid" data-aos="fade-up">What I offer</span>
-            <h2 class="section-title" data-aos="fade-up">My services</h2>
+            <h2 class="section-title text_3D" data-aos="fade-up">My services</h2>
 
             <div class="services_container bd-grid">
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fab fa-r-project services_icon"></i>
                     <h3 class="services_title">Project planning</h3>
                     <p class="services_description">I'm availabel for consultation and project planning</p>
                 </div>
 
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fas fa-dice services_icon"></i>
                     <h3 class="services_title">UI/UX</h3>
                     <p class="services_description">I offer design options and fitting recommendations based on business needs</p>
                 </div>
 
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fas fa-laptop-code services_icon"></i>
                     <h3 class="services_title">Content Develpment</h3>
                     <p class="services_description">I offer quality software at Frontend and backend interfaces, ensure debugging, testing and data-base intergrations</p>
                 </div>
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fas fa-network-wired services_icon"></i>
                     <h3 class="services_title">Production</h3>
                     <p class="services_description">I take care of deployment when its time to deploy the property into the cloud. </p>
                 </div>
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fas fa-server services_icon"></i>
                     <h3 class="services_title">Project Maintenance</h3>
                     <p class="services_description">I offer maintenance services new feature intergrations and infrastuructual intergrity.</p>
                 </div>
-                <div id="cards_services" class="services_content" data-aos="fade-up">
+                <div id="cards_services" class="services_content card_shadow" data-aos="fade-up">
                     <i class="fas fa-users-cog services_icon"></i>
                     <h3 class="services_title">Consultation</h3>
                     <p class="services_description">I offer consultation services about what, why, when, how, and shoud in regards to bleeding edge technology.</p>
@@ -325,23 +328,35 @@
 
         <!-- ======================project in mind flip-card======================= -->
         <section class="project section" data-aos="fade-up">
-            <div class="card flip-card">
-                <div class="flip-card-inner">
-                    <div class="card-front animated">
-                        <img class="card-img-top" src="/public/img/prof_1.jpg" alt="Card image" data-aos="fade-up">
-                        <span><hr></span>
-                        <h3 class="card-title">Project on your mind?</h3>
-                        <a href="">
-                            <p id="flip_link" class="card-text animated slideIn">Hover on this card for details.</p>
-                        </a>
-                        <span><hr></span>
+            <div id="proj_in_mind_mainpage" class="jumbotron text-center hoverable p-4 card_shadow_2 animated">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div class="view overlay" data-aos="fade-up">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="flip-card-back animated">
-                        <h4 class="" data-aos="fade-up">Great! Lets talk and get cooking.</h4>
-                        <span><hr></span>
-                        <p class="card-text" data-aos="fade-up">Based on your preferences, anything is possible. You've been thinking about it, that business you've always dreamed of building from the bottom, indeed You can!</p>
-                        <p class="card-text" data-aos="fade-up">All you gotta do is just reachout to me. You can send an email or a call. </p>
-                        <a href="#contact" class=" stretched-link"><i class="fas fa-link"></i></a>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <!-- Excerpt -->
+                        <a href="#!" class="black-text" data-aos="fade-up">
+                            <h6 class="h6 pb-1 text_3D_paragraph"><i class="fas fa-desktop pr-1"></i> Still here, great!</h6>
+                        </a>
+
+                        <h4 class="h4 mb-4 text_3D_paragraph" data-aos="fade-up"> You have a project in your mind?</h4>
+
+                        <p class="font-weight-normal" data-aos="fade-up">Based on your preferences, anything is possible. You've been thinking about it, that business you've always dreamed of building from the bottom, indeed You can!</p>
+                        <p class="font-weight-normal" data-aos="fade-up">by All you gotta do is just reachout to me. You can send an email or a call.</p>
+
+                        <a class="btn project_btn black-text">Read more</a>
                     </div>
                 </div>
             </div>
@@ -351,10 +366,10 @@
         <!-- ========================works=================== -->
         <section class="works section" id="works">
             <span class="section-subtitle bd-grid" data-aos="fade-up">My portfolio</span>
-            <h2 class="section-title" data-aos="fade-up">Recent Works</h2>
+            <h2 class="section-title text_3D" data-aos="fade-up">Recent Works</h2>
 
             <div class="works_container bd-grid">
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -362,7 +377,7 @@
                         <span class="works_title">project 1</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -371,7 +386,7 @@
                     </div>
                 </div>
 
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -379,7 +394,7 @@
                         <span class="works_title">project 3</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -387,7 +402,7 @@
                         <span class="works_title">project 4</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -395,7 +410,7 @@
                         <span class="works_title">project 5</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -403,7 +418,7 @@
                         <span class="works_title">project 6</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -411,7 +426,7 @@
                         <span class="works_title">project 7</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -419,7 +434,7 @@
                         <span class="works_title">project 8</span>
                     </div>
                 </div>
-                <div class="works_img" data-aos="fade-up" title="click at the link">
+                <div class="works_img card_shadow" data-aos="fade-up" title="click at the link">
                     <img src="/public/img/works/work_1.png" alt="">
 
                     <div class="works_data">
@@ -433,19 +448,19 @@
         <!-- Contact -->
         <section class="contact section" id="contact">
             <span class="section-subtitle bd-grid" data-aos="fade-up" data-aos="fade-up">Contact</span>
-            <h2 class="section-title" data-aos="fade-up" data-aos="fade-up">Get In Touch</h2>
+            <h2 class="section-title text_3D" data-aos="fade-up" data-aos="fade-up">Get In Touch</h2>
 
             <div class="contact_container bd-grid">
 
                 <form action="" class="contact_form">
                     <div class="contact_inputs">
-                        <input type="text" placeholder="Name" class="contact_input" data-aos="fade-up" data-aos="fade-up">
-                        <input type="email" placeholder="Email" class="contact_input" data-aos="fade-up" data-aos="fade-up">
+                        <input type="text" placeholder="Name" class="contact_input card_shadow" data-aos="fade-up" data-aos="fade-up">
+                        <input type="email" placeholder="Email" class="contact_input card_shadow" data-aos="fade-up" data-aos="fade-up">
                     </div>
 
-                    <input type="text" placeholder="Project" class="contact_input" data-aos="fade-up" data-aos="fade-up">
+                    <input type="text" placeholder="Project" class="contact_input card_shadow" data-aos="fade-up" data-aos="fade-up">
 
-                    <textarea name="" id="" cols="0" rows="10" placeholder="type your message here...." class="contact_input" data-aos="fade-up" data-aos="fade-up"></textarea>
+                    <textarea name="" id="" cols="0" rows="10" placeholder="type your message here...." class="contact_input card_shadow" data-aos="fade-up" data-aos="fade-up"></textarea>
 
                     <button id="submit_btn" type="submit" value="Send Message" class="button contact_button" data-aos="fade-up" title="click to send">Send</button>
 
@@ -488,10 +503,10 @@
             <p class="footer_description animated slideInRight ">Feel free to drop some feedback</p>
 
             <div class="footer__s">
-                <a href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="footer_link animated slideInLeft slow"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
-                <a href="" target="_blank" class="footer_link animated slideInLeft slow"><i class="fab fa-instagram" title="Instagram"></i></a>
-                <a href="https://github.com/raybags-web-dev" target="_blank" class="footer_link animated slideInRight slow"><i class="fab fa-github" title="Github"></i></i></a>
-                <a href="https://www.hackerrank.com/baguma_github" target="_blank" class="footer_link animated slideInRight slow"><i class="fab fa-hackerrank" title="HackerRank"></i></a>
+                <a href="https://www.linkedin.com/in/ray-baguma/" target="_blank" class="footer_link animated pulse slower infinite card_shadow_2"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+                <a href="" target="_blank" class="footer_link animated pulse slower infinite"><i class="fab fa-instagram card_shadow_2" title="Instagram"></i></a>
+                <a href="https://github.com/raybags-web-dev" target="_blank" class="footer_link animated pulse slower infinite card_shadow_2"><i class="fab fa-github" title="Github"></i></i></a>
+                <a href="https://www.hackerrank.com/baguma_github" target="_blank" class="footer_link animated pulse slower infinite card_shadow_2"><i class="fab fa-hackerrank" title="HackerRank"></i></a>
             </div>
 
             <p class="footer_copyright animated fadeIn slow">All rights reserved | 2020</p>

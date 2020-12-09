@@ -10,7 +10,11 @@ const spinnerIcon = document.getElementById('spinner');
 const cards = document.querySelectorAll('#cards_services');
 const links_items = document.querySelectorAll('.nav_list li');
 const top_button = document.getElementById('scroll_top_btn');
+const main_page_image_container = document.getElementsByClassName('home_img');
+const main_page_title = document.getElementsByClassName('home_title');
 
+// sudo profile image manipulation
+coverImage_manipulator(main_page_image_container, main_page_title);
 // card animation
 flipCard();
 // animation module
