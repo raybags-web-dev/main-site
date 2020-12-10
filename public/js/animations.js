@@ -22,7 +22,4 @@ function coverImage_manipulator(img_container, main_title) {
     });
 }
 // On hover change profile page function
-
-
-
 export { animation_module, coverImage_manipulator }
