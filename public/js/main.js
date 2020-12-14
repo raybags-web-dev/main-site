@@ -1,6 +1,7 @@
 'use strict';
 //Menu show hidden
 import { animation_module, top_nav_bar_handle, autoRunAnimation } from './animations.js';
+import { cookie_accepted } from './helper.js';
 
 const navMenu = document.getElementById('nav-menu');
 const toggleMenu = document.getElementById('nav-toggle');
@@ -10,12 +11,19 @@ const spinnerIcon = document.getElementById('spinner');
 const links_items = document.querySelectorAll('.nav_list li');
 const top_button = document.getElementById('scroll_top_btn');
 
+const cookie_accept_bunner = document.querySelector('.alert_box_accepted');
+const cookie_btn = document.querySelector('.closebtn')
+
 const top_nav = document.querySelector('#main_p_nav');
 const page_title = document.querySelector('.home_title');
 
 const profBox = document.querySelector('.home_img');
 const profPic = document.querySelector('.prof_pho');
 
+export { cookie_accept_bunner, cookie_btn };
+
+// cookie accepeted handler
+cookie_accepted();
 // onscroll image animation handler
 (function() {
     $(document).ready(function() {
@@ -36,9 +44,10 @@ const profPic = document.querySelector('.prof_pho');
         })
     })
 }());
+
+
 // top navbar handler
 top_nav_bar_handle(top_nav, page_title, profBox, profPic);
-
 // animation module
 animation_module;
 // Show
@@ -57,7 +66,6 @@ toggleMenu.addEventListener('click', () => {
 });
 
 // spinner show on load
-
 $(window).on('load', () => {
         $(spinnerIcon).fadeOut("slow");;
         console.log('All resources loaded successfully');
@@ -141,24 +149,3 @@ $(document).ready(function() {
 $(window).scroll(function() {
     scrollSpy();
 });
-
-// On hover change profile page handler
-function aprofile_phot_handler() {
-    $(document).ready(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 10) {
-
-                image_profile.addEventListener('mouseover', function() {
-                    console.log('Event triggered');
-                });
-
-                let event = new MouseEvent('mouseover', {
-                    'view': window,
-                    'bubbles': true,
-                    'cancelable': true
-                });
-                image_profile.dispatchEvent(event);
-            }
-        })
-    })
-}

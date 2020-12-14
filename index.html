@@ -14,15 +14,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- cookiealert styles CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
     <!--====CSS script ====-->
     <link rel="stylesheet" href="/public/styles/styles.css">
 </head>
 
 <body class="">
+
     <!-- ===Spinner==== -->
     <div id="spinner" class="spinner-borderm" style="width: 7rem; height: 7rem; color: rgb(248, 247, 247);" role="status">
         <span class="sr-only">Loading...</span>
     </div>
+
     <!-- ===spinner==== -->
     <header class="main_header">
         <nav class="nav bd-grid">
@@ -53,12 +57,20 @@
         <div id="main_p_nav" class=" animated"></div>
         <!-- home -->
         <section class="home" id="home">
-            <div class="home_container" id="bd-grid">
+            <div class="home_container bd-grid">
+                <!-- =========alert box====== -->
+                <div class="alert_box_accepted animated hide">
+                    <span class="closebtn">&times;</span>
+                    <p>
+                        Thank you for your trust and welcome to my world. &emsp;&emsp; Now, click me away on the right.
+                    </p>
+                </div>
+                <!-- =========alert box====== -->
                 <div class="home_data">
                     <div class="home_img animated">
                         <img class="prof_pho animated" src="/public/img/works/ptofile_2.jpg" alt="profile-image" draggable="true">
                     </div>
-                    <h1 class="home_title animated fadeIn slow text_3D_main">Raymond <span>Baguma</span> </h1>
+                    <h1 class="home_title animated fadeIn  text_3D_main">Raymond <span>Baguma</span> </h1>
                     <span class="home_profession animated text_3D_paragraph">Frontend Developer</span>
 
                     <div class="home_social animated pulse slower infinite">
@@ -152,61 +164,61 @@
         <!-- ===========about section big screen========= -->
 
         <!-- skills -->
-        <section class="skills section" id="skills"></section>
-        <span class="section-subtitle bd-grid animated fadeIn slow text_3D_paragraph" data-aos="fade-up">Why I'm the best candidate for the job</span>
-        <h2 class="section-title animated fadeIn delay-1s text_3D" data-aos="fade-up">My expertise Area</h2>
+        <section class="skills section" id="skills">
+            <span class="section-subtitle bd-grid animated fadeIn slow text_3D_paragraph" data-aos="fade-up">Why I'm the best candidate for the job</span>
+            <h2 class="section-title animated fadeIn delay-1s text_3D" data-aos="fade-up">My expertise Area</h2>
 
-        <div class="skills_container bd-grid">
+            <div class="skills_container bd-grid">
 
-            <div class="skills_content">
-                <h3 class="skills_subtitle" data-aos="fade-up">Frontend</h3>
+                <div class="skills_content">
+                    <h3 class="skills_subtitle" data-aos="fade-up">Frontend</h3>
 
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">HTML/CSS</span>
-                    <span class="skills_number" data-aos="fade-up">85%</span>
-                    <span class="skills_bar skills_html" data-aos="fade-right"></span>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">HTML/CSS</span>
+                        <span class="skills_number" data-aos="fade-up">85%</span>
+                        <span class="skills_bar skills_html" data-aos="fade-right"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">Javascript</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_js" data-aos="fade-right"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">Vue.js</span>
+                        <span class="skills_number" data-aos="fade-up">65%</span>
+                        <span class="skills_bar skills_vue" data-aos="fade-right"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">Bootstrap</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_bootstrap" data-aos="fade-right"></span>
+                    </div>
                 </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">Javascript</span>
-                    <span class="skills_number" data-aos="fade-up">80%</span>
-                    <span class="skills_bar skills_js" data-aos="fade-right"></span>
-                </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">Vue.js</span>
-                    <span class="skills_number" data-aos="fade-up">65%</span>
-                    <span class="skills_bar skills_vue" data-aos="fade-right"></span>
-                </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">Bootstrap</span>
-                    <span class="skills_number" data-aos="fade-up">80%</span>
-                    <span class="skills_bar skills_bootstrap" data-aos="fade-right"></span>
+                <div class="skills_content">
+                    <h3 class="skills_subtitle" data-aos="fade-up">Backend</h3>
+
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">Node js</span>
+                        <span class="skills_number" data-aos="fade-up">60%</span>
+                        <span class="skills_bar skills_nodejs" data-aos="fade-left"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">Javascript</span>
+                        <span class="skills_number" data-aos="fade-up">80%</span>
+                        <span class="skills_bar skills_js" data-aos="fade-left"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">MongoDB</span>
+                        <span class="skills_number" data-aos="fade-up">75%</span>
+                        <span class="skills_bar skills_mongodb" data-aos="fade-left"></span>
+                    </div>
+                    <div class="skills_data">
+                        <span class="skills_name" data-aos="fade-up">jQuery</span>
+                        <span class="skills_number" data-aos="fade-up">70%</span>
+                        <span class="skills_bar skills_jquery" data-aos="fade-left"></span>
+                    </div>
                 </div>
             </div>
-            <div class="skills_content">
-                <h3 class="skills_subtitle" data-aos="fade-up">Backend</h3>
-
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">Node js</span>
-                    <span class="skills_number" data-aos="fade-up">60%</span>
-                    <span class="skills_bar skills_nodejs" data-aos="fade-left"></span>
-                </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">Javascript</span>
-                    <span class="skills_number" data-aos="fade-up">80%</span>
-                    <span class="skills_bar skills_js" data-aos="fade-left"></span>
-                </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">MongoDB</span>
-                    <span class="skills_number" data-aos="fade-up">75%</span>
-                    <span class="skills_bar skills_mongodb" data-aos="fade-left"></span>
-                </div>
-                <div class="skills_data">
-                    <span class="skills_name" data-aos="fade-up">jQuery</span>
-                    <span class="skills_number" data-aos="fade-up">70%</span>
-                    <span class="skills_bar skills_jquery" data-aos="fade-left"></span>
-                </div>
-            </div>
-        </div>
 
         </section>
 
@@ -478,6 +490,22 @@
         </section>
         <div id="scroll_top_btn" class="animated"><i class="fas fa-angle-double-up top_bt"></i></div>
     </main>
+
+    <!-- ===================cookie================== -->
+    <!--Cookie-Alert -->
+    <div id="cookie_container" class="alert text-center cookiealert" role="alert">
+        <div class="cookie_para">
+            <p><b>Do you like cookies? I hope you do</b> We use cookies to ensure you get the best experience on our website.</p>
+        </div>
+        <div class="cookie_buttons">
+            <a id="cookie_link_more" class="btn btn-sm" href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+            <button id="cookie_btnn" type="button" class="btn  btn-sm acceptcookies">I accept</button>
+        </div>
+
+    </div>
+
+
+    <!-- ===================cookie==================== -->
     <!-- Footer -->
     <footer class="footer section">
         <div class="footer_container bd-grid">
@@ -507,10 +535,12 @@
     <!-- AOS library CDN JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- cookie alert CDN script -->
+    <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
     <!-- ====Customer JS script==== -->
     <script type="module" src="/public/js/main.js"></script>
-    <!-- =====animations======== -->
-    <!-- <script type="text/javascript" src="/public/js/animations.js" async></script> -->
+
 </body>
 
 </html>
