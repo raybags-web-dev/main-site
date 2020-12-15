@@ -1057,6 +1057,34 @@ a {
     .works_container {
         grid-template-columns: repeat(3, 1fr);
     }
+    /* scrollbar styles */
+    body::-webkit-scrollbar {
+        width: 1rem;
+        border: 2px solid inherit;
+        background: inherit;
+        border-radius: 0;
+    }
+    body::-webkit-scrollbar-button {
+        box-shadow: inset 0 0 6px inherit;
+        color: rgb(48, 42, 102);
+        cursor: pointer;
+        background-color: inherit;
+    }
+    body::-webkit-scrollbar-track {
+        background: inherit;
+        outline: 6px solid inherit;
+        box-shadow: inset 0 12px inherit;
+    }
+    body::-webkit-scrollbar-track-piece {
+        color: white;
+        background-color: transparent;
+    }
+    body::-webkit-scrollbar-thumb {
+        position: relative;
+        border: .5rem solid #070707;
+        height: 10%;
+        border-radius: .1rem;
+    }
     /* ============profile pic animation==============- */
     .home_img {
         width: 25%;
@@ -1326,6 +1354,33 @@ a {
     body,
     html {
         scroll-behavior: smooth;
+    }
+    body::-webkit-scrollbar {
+        width: 1rem;
+        border: 2px solid rgb(77, 47, 47);
+        background: rgb(77, 2, 2);
+        border-radius: 0;
+    }
+    body::-webkit-scrollbar-button {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        color: rgb(48, 42, 102);
+        cursor: pointer;
+        background-color: rgb(77, 2, 2);
+    }
+    body::-webkit-scrollbar-track {
+        background: rgb(41, 0, 0);
+        outline: 6px solid rgb(71, 6, 3);
+        box-shadow: inset 0 12px rgba(250, 247, 247, 0.4);
+    }
+    body::-webkit-scrollbar-track-piece {
+        color: white;
+        background-color: transparent;
+    }
+    body::-webkit-scrollbar-thumb {
+        position: relative;
+        border: .5rem solid rgb(252, 3, 3);
+        height: 10%;
+        border-radius: 2rem;
     }
     .main_header {
         position: relative;
