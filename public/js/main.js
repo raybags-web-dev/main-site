@@ -1,5 +1,5 @@
 'use strict';
-//Menu show hidden
+
 import { animation_module, top_nav_bar_handle, autoRunAnimation } from './animations.js';
 import { cookie_accepted } from './helper.js';
 
@@ -10,20 +10,22 @@ const closeButton = document.querySelector('#nav-close .fas');
 const spinnerIcon = document.getElementById('spinner');
 const links_items = document.querySelectorAll('.nav_list li');
 const top_button = document.getElementById('scroll_top_btn');
-
 const cookie_accept_bunner = document.querySelector('.alert_box_accepted');
 const cookie_btn = document.querySelector('.closebtn')
-
 const top_nav = document.querySelector('#main_p_nav');
 const page_title = document.querySelector('.home_title');
-
 const profBox = document.querySelector('.home_img');
 const profPic = document.querySelector('.prof_pho');
 
 export { cookie_accept_bunner, cookie_btn };
 
+// animation module
+animation_module;
 // cookie accepeted handler
 cookie_accepted();
+// top navbar handler
+top_nav_bar_handle(top_nav, page_title, profBox, profPic);
+
 // onscroll image animation handler
 (function() {
     $(document).ready(function() {
@@ -46,10 +48,6 @@ cookie_accepted();
 }());
 
 
-// top navbar handler
-top_nav_bar_handle(top_nav, page_title, profBox, profPic);
-// animation module
-animation_module;
 // Show
 toggleMenu.addEventListener('click', () => {
     navMenu.classList.toggle('show');
@@ -90,7 +88,6 @@ function linkAction() {
 }
 // handle clicks on links
 navLink.forEach(n => n.addEventListener('click', linkAction));
-
 
 // =========Hide top button onloade==========
 const hide_top_button = function() {

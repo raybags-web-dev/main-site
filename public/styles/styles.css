@@ -57,6 +57,9 @@
     --ontop: 100;
     /* box shaddow */
     --shadow: 2px 2px 12px rgb(0, 0, 0, .4);
+    /* height and width */
+    --height: 100%;
+    --width: 100%
 }
 
 @media screen and (min-width: 768px) {
@@ -155,8 +158,8 @@ a {
 
 .home_img::before {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: var(--width);
+    height: var(--height);
     background: rgba(109, 94, 92, .3);
     transition: .6s;
     left: -1.5rem;
@@ -169,8 +172,8 @@ a {
 
 .home_img::after {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: var(--width);
+    height: var(--height);
     transition: .4s;
     left: -2.5rem;
     top: -2rem;
@@ -227,7 +230,7 @@ a {
 }
 
 .main_header {
-    width: 100%;
+    width: var(--width);
     position: fixed;
     top: 0;
     left: 0;
@@ -270,7 +273,7 @@ a {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: var(--width);
     border: none;
     height: 100vh;
     padding: 3rem;
@@ -446,6 +449,52 @@ a {
 }
 
 
+/* background  wave shadow  */
+
+.water_drop {
+    display: block;
+    position: fixed;
+    border-style: solid;
+    top: 0%;
+    left: -5%;
+    height: 0%;
+    width: 0%;
+    z-index: -1000;
+    animation-name: centerCircle;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: reverse;
+    width: 0%;
+    border-radius: 50%;
+    opacity: .2;
+    cursor: pointer;
+    backdrop-filter: blur(100%);
+    border: 1rem solid #6e0404;
+    transform: translate(360deg);
+    box-shadow: var(--shadow);
+    background-image: linear-gradient(45deg, #5c0d02 0%, #e21e11 100%);
+}
+
+@keyframes centerCircle {
+    0% {
+        box-shadow: 0 8px 6px 10000px rgb(236, 165, 165);
+    }
+    25% {
+        box-shadow: 0 8px 6px 10px rgb(247, 215, 215);
+    }
+    50% {
+        box-shadow: 0 8px 6px 10px rgb(240, 208, 208);
+    }
+    75% {
+        box-shadow: 0 8px 6px 10px rgb(248, 166, 166);
+    }
+    100% {
+        box-shadow: 0 8px 6px 0px rgb(245, 159, 159);
+    }
+}
+
+
 /* image resizing */
 
 #about_card {
@@ -463,7 +512,7 @@ a {
 }
 
 .group_img img {
-    width: 100%;
+    width: var(--width);
     margin: auto;
 }
 
@@ -671,7 +720,7 @@ a {
 
 .egg {
     position: absolute;
-    width: 100%;
+    width: var(--width);
     height: 88%;
     z-index: -9999;
     background-repeat: repeat;
@@ -847,8 +896,8 @@ a {
 .works_img img {
     border-radius: .5rem;
     margin: auto;
-    width: 100%;
-    height: 100%;
+    width: var(--width);
+    height: var(--height);
     backdrop-filter: blur(20px);
 }
 
@@ -861,8 +910,8 @@ a {
 .works_data {
     position: absolute;
     bottom: -100%;
-    width: 100%;
-    height: 100%;
+    width: var(--width);
+    height: var(--height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -900,7 +949,7 @@ a {
 }
 
 .contact_input {
-    width: 100%;
+    width: var(--width);
     padding: 1rem;
     outline: none;
     border: none;
@@ -1013,7 +1062,7 @@ a {
     position: fixed;
     padding: 1rem;
     top: 0%;
-    width: 100%;
+    width: var(--width);
     left: 0%;
     z-index: 100;
     background-color: inherit;
@@ -1107,8 +1156,8 @@ a {
     }
     .home_img::before {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         background: rgba(109, 94, 92, .3);
         transition: .6s;
         left: -1.5rem;
@@ -1120,8 +1169,8 @@ a {
     }
     .home_img::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         background: rgba(151, 142, 140, .5);
         transition: .4s;
         left: -2.5rem;
@@ -1250,6 +1299,48 @@ a {
         padding-bottom: 3rem;
         letter-spacing: 1px;
     }
+    /* background  wave shadow  */
+    .water_drop {
+        display: block;
+        position: fixed;
+        border-style: solid;
+        top: 0%;
+        left: -5%;
+        height: 0%;
+        width: 0%;
+        z-index: -1000;
+        animation-name: centerCircle;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-direction: reverse;
+        width: 0%;
+        border-radius: 50%;
+        opacity: .2;
+        cursor: pointer;
+        backdrop-filter: blur(100%);
+        border: 1rem solid #6e0404;
+        transform: translate(360deg);
+        box-shadow: var(--shadow);
+        background-image: linear-gradient(45deg, #5c0d02 0%, #e21e11 100%);
+    }
+    @keyframes centerCircle {
+        0% {
+            box-shadow: 0 8px 6px 10000px rgb(236, 165, 165);
+        }
+        25% {
+            box-shadow: 0 8px 6px 10px rgb(247, 215, 215);
+        }
+        50% {
+            box-shadow: 0 8px 6px 10px rgb(240, 208, 208);
+        }
+        75% {
+            box-shadow: 0 8px 6px 10px rgb(248, 166, 166);
+        }
+        100% {
+            box-shadow: 0 8px 6px 0px rgb(245, 159, 159);
+        }
+    }
     /* ============top button style=========== */
     #scroll_top_btn {
         position: fixed;
@@ -1327,7 +1418,7 @@ a {
         position: fixed;
         padding: 1rem;
         top: 0%;
-        width: 100%;
+        width: var(--width);
         left: 0%;
         z-index: 100;
         background-color: inherit;
@@ -1448,8 +1539,8 @@ a {
     }
     .home_img::before {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         transition: .6s;
         left: -1.5rem;
         top: -1rem;
@@ -1462,8 +1553,8 @@ a {
     }
     .home_img::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         transition: 1s;
         left: -2.5rem;
         top: -2rem;
@@ -1476,8 +1567,8 @@ a {
     }
     .home_img_extra::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         transition: 1s;
         left: -2.9rem;
         top: -3rem;
@@ -1614,10 +1705,10 @@ a {
     .top_body_nav {
         display: flex;
         position: fixed;
-        width: 100%;
+        width: var(--width);
         height: 10%;
         transition: .5s;
-        top: 2.5rem;
+        top: 1rem;
         z-index: -200;
         overflow: hidden;
         background-color: rgb(141, 47, 47);
@@ -1626,7 +1717,7 @@ a {
     .top_body_nav_2 {
         display: flex;
         position: fixed;
-        width: 100%;
+        width: var(--width);
         height: 3%;
         transition: .5s;
         top: 0rem;
@@ -1643,8 +1734,8 @@ a {
     }
     .home_img_top_nav_1::before {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         background: rgba(109, 94, 92, .3);
         transition: .6s;
         left: 0;
@@ -1662,8 +1753,8 @@ a {
     }
     .home_img_top_nav_2::after {
         content: "";
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         transition: .4s;
         left: 0;
         top: 0;
@@ -1678,15 +1769,41 @@ a {
         width: 70px;
         height: 70px;
         left: 94%;
-        top: 2.6rem;
+        top: 1rem;
         cursor: pointer;
         padding: .2rem;
+        animation-name: ring;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
         user-select: none;
         border: .2rem solid #a33232;
         filter: grayscale(100%);
         border-radius: 50rem;
         transform: scale(1.1);
         box-shadow: 1px 2px 4px rgba(3, 3, 3, 0.4);
+    }
+    @keyframes ring {
+        0% {
+            transform: translateY(-70%);
+            opacity: 0;
+        }
+        25% {
+            transform: translateY(-50%);
+            opacity: .2;
+        }
+        50% {
+            transform: translateY(-30%);
+            opacity: .4;
+        }
+        75% {
+            transform: translateY(-20%);
+            opacity: .6;
+        }
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
     }
     .hover_effect__top_nav {
         border: .4rem solid #fcc8c2;
@@ -1702,9 +1819,9 @@ a {
     }
     .home_title_top_nav {
         position: fixed;
-        top: -.5rem;
+        top: -2rem;
         font-size: 23px;
-        left: 20%;
+        left: 25%;
         font-weight: 200;
         text-shadow: 1px 1px 1px #070707, 1px 2px 1px #0a0a0a, 1px 3px 1px #1b0101, 1px 4px 1px #ee1111, 1px 5px 1px #720404, 1px 6px 1px #573737, 1px 7px 1px #fcf8f8, 1px 8px 1px #110000, 1px 9px 1px #3b0202, 1px 10px 1px #580202, 1px 18px 6px rgba(5, 5, 5, 0.4), 1px 22px 10px rgba(253, 250, 250, 0.2), 1px 25px 35px rgba(253, 252, 252, 0.2), 1px 30px 60px rgba(250, 247, 247, 0.4);
     }
@@ -1841,7 +1958,7 @@ a {
         content: '';
         position: absolute;
         padding-top: .5rem;
-        width: 100%;
+        width: var(--width);
         height: 80%;
         left: 2%;
         z-index: -2;
@@ -1859,7 +1976,7 @@ a {
         content: '';
         position: absolute;
         padding-top: .5rem;
-        width: 100%;
+        width: var(--width);
         height: 80%;
         left: 2%;
         z-index: -2;
@@ -1877,14 +1994,14 @@ a {
     .about_infomation-data:hover:before,
     .about_infomation-data:hover:after {
         transition: .5s;
-        height: 100%;
+        height: var(--height);
         cursor: copy;
         border-top: none;
         opacity: 1;
     }
     .education_time {
         display: block;
-        height: 100%;
+        height: var(--height);
         width: 2px;
         padding-left: 8rem;
         padding-right: 8rem;
@@ -1903,7 +2020,7 @@ a {
     .education_content::before {
         content: '';
         position: absolute;
-        width: 100%;
+        width: var(--width);
         height: 80%;
         left: 0%;
         z-index: -2;
@@ -1920,7 +2037,7 @@ a {
     .education_content::after {
         content: '';
         position: absolute;
-        width: 100%;
+        width: var(--width);
         height: 80%;
         left: 0%;
         z-index: -2;
@@ -1938,7 +2055,7 @@ a {
     .education_content:hover:after {
         position: absolute;
         transition: .5s;
-        height: 100%;
+        height: var(--height);
         cursor: copy;
         padding-right: 1rem;
         border-top: none;
@@ -1960,6 +2077,7 @@ a {
     }
     .skills_data {
         padding-bottom: 1rem;
+        padding-left: .6rem;
         color: white;
         font-size: 1.2rem;
     }
@@ -1967,8 +2085,8 @@ a {
     .skills_data::before {
         content: '';
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         left: 0%;
         z-index: -2;
         border-radius: .5rem;
@@ -1982,8 +2100,8 @@ a {
     .skills_data::after {
         content: '';
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         left: 0%;
         z-index: -2;
         border-radius: .5rem;
@@ -1998,7 +2116,7 @@ a {
     .skills_data:hover:after {
         position: absolute;
         transition: .5s;
-        height: 100%;
+        height: var(--height);
         cursor: copy;
         border-top: none;
         backdrop-filter: blur(20px);
@@ -2026,7 +2144,7 @@ a {
     .project {
         position: relative;
         width: 67vw;
-        height: 100%;
+        height: var(--height);
         margin: 1rem auto;
         backdrop-filter: blur(20px);
         box-shadow: -10px 10px 10px rgb(0, 0, 0, .4);
@@ -2122,8 +2240,8 @@ a {
     .works_data {
         position: absolute;
         bottom: -100%;
-        width: 100%;
-        height: 100%;
+        width: var(--width);
+        height: var(--height);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2165,7 +2283,7 @@ a {
     }
     .contact_input {
         position: relative;
-        width: 100%;
+        width: var(--width);
         padding: 1rem;
         outline: none;
         border: none;
@@ -2350,6 +2468,46 @@ a {
         color: var(--font-white);
         letter-spacing: 10px;
     }
+    .water_drop {
+        display: block;
+        position: absolute;
+        border-style: solid;
+        top: 0%;
+        left: 34%;
+        height: 50vw;
+        z-index: -1000;
+        animation-name: centerCircle;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-direction: reverse;
+        width: 50%;
+        border-radius: 50%;
+        opacity: .2;
+        cursor: pointer;
+        backdrop-filter: blur(100%);
+        border: 1rem solid #6e0404;
+        transform: translate(360deg);
+        box-shadow: var(--shadow);
+        background-image: linear-gradient(45deg, #5c0d02 0%, #e21e11 100%);
+    }
+    @keyframes centerCircle {
+        0% {
+            box-shadow: 0 8px 6px 10000px rgb(110, 4, 4);
+        }
+        25% {
+            box-shadow: 0 8px 6px 10px rgb(175, 4, 4);
+        }
+        50% {
+            box-shadow: 0 8px 6px 10px rgb(216, 5, 5);
+        }
+        75% {
+            box-shadow: 0 8px 6px 10px rgb(231, 5, 5);
+        }
+        100% {
+            box-shadow: 0 8px 6px 0px rgb(240, 82, 82);
+        }
+    }
 }
 
 
@@ -2400,7 +2558,7 @@ a {
     content: '';
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: var(--height);
     z-index: -4;
     right: 50%;
     top: 0;
@@ -2414,7 +2572,7 @@ a {
     content: '';
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: var(--height);
     left: 50%;
     top: 0%;
     transition: .5s;
@@ -2446,16 +2604,13 @@ a {
 /* ==========lean more and accept  cookie button psudo elements ======= */
 
 
-/* ===========Alert styling */
-
-
 /* The alert message box */
 
 .alert_box_accepted {
     position: fixed;
     padding: 1rem;
     top: 0%;
-    width: 100%;
+    width: var(--width);
     left: 0%;
     z-index: 100;
     background-color: #410905;

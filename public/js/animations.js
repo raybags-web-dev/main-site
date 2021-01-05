@@ -1,6 +1,7 @@
-const animation_module = AOS.init();
+import {} from './main.js';
 
-// auto removal animation for profile pic
+const animation_module = AOS.init();
+// handler for  auto removal of animation and color filter from profile pic.
 const autoRunAnimation = function(element) {
     $(document).ready(function() {
         let isPresent = $(element).attr('class').match(/home_img_top_nav_1| home_img_top_nav_2| gray_layer/);
@@ -9,7 +10,6 @@ const autoRunAnimation = function(element) {
             ($(element).addClass('home_img_top_nav_1'),
                 $(element).addClass('gray_layer'),
                 $(element).addClass('home_img_top_nav_2'));
-
     })
 }
 
@@ -30,16 +30,15 @@ function top_nav_bar_handle(top_nav, page_title, image_container, image_pic) {
             } else {
                 $(top_nav).addClass('top_body_nav_2');
                 $(top_nav).removeClass('top_body_nav');
-
                 $(page_title).removeClass('home_title_top_nav slideInDown gray_layer');
-
                 $(image_container).removeClass('home_img_top_nav_1 home_img_top_nav_2');
-
                 $(image_pic).removeClass('prof_pho__top_nav slideInDown');
 
             }
         });
     });
 }
+
+// water drop image background main page handler
 
 export { animation_module, top_nav_bar_handle, autoRunAnimation }
